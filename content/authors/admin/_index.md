@@ -144,10 +144,10 @@ skills:
 languages:
   - name: English
     percent: 100
-  - name: Chinese
+  - name: Swedish
     percent: 75
-  - name: Portuguese
-    percent: 25
+  # - name: Portuguese
+  #   percent: 25
 
 # Awards.
 #   Add/remove as many awards below as you like.
@@ -183,4 +183,4 @@ awards:
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am a life science researcher, interested in scientific data analysis and scientific communication. I carried out my doctoral research on spatial vision in simple visual systems at Lund University, Sweden. I am a bioinformatics scientist at Arquimea Research Centre, La Laguna, Spain. Find my CV [here](https://europa.eu/europass/eportfolio/screen/share/942e5ab3-b2ab-4be4-b689-d852a07d4801).
