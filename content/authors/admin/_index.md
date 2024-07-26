@@ -97,13 +97,16 @@ work:
     date_start: 2019-10-01
     date_end: 2022-06-22
     summary: |2-
-       
-  - position: Project Manager - Vision Research
+      Post-doctoral research on the evolution of visual systems in marine invertebrates.
+
+  - position: Project Manager
     company_name: Lund University
     company_url: 'http://www.lu.se'
     date_start: 2019-06-01
     date_end: 2019-08-31
     summary: |2-
+       
+        
   - position: Doctoral Researcher
     company_name: Lund University
     company_url: 'http://www.lu.se'
