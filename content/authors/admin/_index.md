@@ -77,7 +77,7 @@ education:
     date_start: 2004-09-12
     date_end: 2008-05-31
     summary: |
-      GPA: 4.1/4.2
+      GPA: 4.02/4.2
       
       Courses included:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
