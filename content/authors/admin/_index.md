@@ -154,7 +154,7 @@ skills:
         description: ''
         percent: 60
         icon: person-simple-walk
-      - name: Cats
+      - name: Running
         description: ''
         percent: 100
         icon: cat
