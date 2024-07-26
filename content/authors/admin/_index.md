@@ -78,34 +78,61 @@ education:
     date_end: 2008-05-31
     summary: |
       GPA: 4.02/4.2
-      
       Courses included:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
 work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
-    company_url: ''
+  - position: Researcher
+    company_name: Arquimea Research Centre
+    company_url: 'https://www.arquimea.com/research-development-innovation/research-center/'
     company_logo: ''
-    date_start: 2021-01-01
+    date_start: 2022-07-04
     date_end: ''
     summary: |2-
       Responsibilities include:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
-    company_url: ''
-    company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
+  - position: Post-doctoral Researcher
+    company_name: Stazione Zoologica Anton Dorhn
+    company_url: 'http://www.szn.it'
+    date_start: 2019-10-01
+    date_end: 2022-06-22
+    summary: |2-
       Responsibilities include:
-      - Migrated infrastructure to a new data center
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - position: Project Manager - Vision Research
+    company_name: Lund University
+    company_url: 'http://www.lu.se'
+    date_start: 2019-06-01
+    date_end: 2019-08-31
+    summary: |2-
+      Responsibilities include:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - position: Doctoral Researcher
+    company_name: Lund University
+    company_url: 'http://www.lu.se'
+    date_start: 2013-05-15
+    date_end: 2018-06-07
+    summary: |2-
+      Wrote my PhD thesis '[Spatial Vision in Diverse Invertebrates](https://portal.research.lu.se/portal/en/publications/spatial-vision-in-diverse-invertebrates(dc76fe19-18de-49e6-955a-47d1a084760c).html)' at the [Lund Vision Group](https://www.biology.lu.se/research/research-groups/lund-vision-group) in Sweden.
+  # [[experience]]
+  #   title = "Expedition Assistant Leader"
+  #   company = "[Lowest to Highest for Cancer Expedition](http://www.khcc.jo/en/news/lowest-point-highest-point-cancer-expedition-team-members-arrive-safely-jordan)"
+  #   company_url = ""
+  #   location = "Solokhumbu, Nepal"
+  #   date_start = "2013-04-16"
+  #   date_end = "2013-05-10"
+  #   description = """Assistant Leader for Expedition to Everest Basecamp."""
+  # [[experience]]
+  #   title = "Research Assistant"
+  #   company = "Trinity College Dublin"
+  #   company_url = "https://naturalscience.tcd.ie/"
+  #   location = "Dublin, Ireland"
+  #   date_start = "2012-10-01"
+  #   date_end = "2013-04-15"
+  #   description = """Ecological modelling using R."""
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
