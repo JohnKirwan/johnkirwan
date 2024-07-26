@@ -113,8 +113,8 @@ work:
     summary: |2-
       Wrote my PhD thesis '[Spatial Vision in Diverse Invertebrates](https://portal.research.lu.se/portal/en/publications/spatial-vision-in-diverse-invertebrates(dc76fe19-18de-49e6-955a-47d1a084760c).html)' at the [Lund Vision Group](https://www.biology.lu.se/research/research-groups/lund-vision-group) in Sweden.
   - position: Expedition Assistant Leader
-    company_name = [Lowest to Highest for Cancer Expedition](http://www.khcc.jo/en/news/lowest-point-highest-point-cancer-expedition-team-members-arrive-safely-jordan)
-    company_url = ""
+    company_name: [Lowest to Highest for Cancer Expedition](http://www.khcc.jo/en/news/lowest-point-highest-point-cancer-expedition-team-members-arrive-safely-jordan)
+    company_url: ""
     date_start: 2013-04-16
     date_end: 2013-05-10
     summary: |2-
