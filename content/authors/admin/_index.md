@@ -41,6 +41,10 @@ profiles:
     url: https://github.com/JohnKirwan
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/johndkirwan
+  - icon: academicons/researchgate
+    url: 'https://www.researchgate.net/profile/John-Kirwan-6'
+#  - icon: publons
+#    url: 'https://publons.com/researcher/C-6734-2015/'
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=b2UN4cEAAAAJ
   - icon: academicons/orcid
