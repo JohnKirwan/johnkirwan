@@ -158,7 +158,6 @@ awards:
     awarder: Coursera / IBM
     url: https://coursera.org/share/d217c2ee9082940b903d22e46d3e8062
     date: '2023-03-10'
-    summary: |
   - title: Blockchain Fundamentals
     url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
     date: '2023-07-01'
