@@ -92,7 +92,7 @@ work:
       - Biostatistics and probabilistic modelling, using PyMC and Stan
   - position: Post-doctoral Researcher
     company_name: Stazione Zoologica Anton Dorhn, Naples, Italy
-    company_url: 'http://www.szn.it'
+    company_url: http://www.szn.it
     company_logo: ''
     date_start: 2019-10-01
     date_end: 2022-06-22
