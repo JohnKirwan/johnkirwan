@@ -62,8 +62,8 @@ education:
     summary: |
       Thesis 'Spatial Vision in Diverse Invertebrates'.
     button:
-      text: 'Read Thesis'
-      url: 'https://portal.research.lu.se/en/publications/spatial-vision-in-diverse-invertebrates'
+      text: 'Read Thesis Introduction'
+      url: 'https://lucris.lub.lu.se/ws/portalfiles/portal/43103387/John_Kirwan_WEBB.PDF'
   - area: MSc Molecular Evolution
     institution: University College Dublin
     date_start: 2008-12-09
