@@ -35,7 +35,7 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        My current research focuses on data science in the lief science domain. 
+        My current research focuses on data science in the life science domain. 
     design:
       columns: '1'
   - block: collection
