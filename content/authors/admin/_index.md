@@ -1,6 +1,6 @@
 ---
 # Display name
-title: John Kirwan
+title: Dr. John D. Kirwan
 
 # Name pronunciation (optional)
 name_pronunciation: 
@@ -10,8 +10,8 @@ first_name: John D.
 last_name: Kirwan
 
 # Status emoji
-status:
-  icon: ☕️
+# status:
+#   icon: ☕️
 
 # Is this the primary user of the site?
 superuser: true
