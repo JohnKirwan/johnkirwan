@@ -140,7 +140,7 @@ languages:
   - name: Swedish
     percent: 50
   - name: Spanish
-    percent: 25
+    percent: 50
 
 # Awards.
 #   Add/remove as many awards below as you like.
@@ -154,6 +154,11 @@ awards:
     icon: coursera
     summary: |
       I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
+  - title: [Applied Software Engineering Fundamentals Specialization](https://www.coursera.org/specializations/software-engineering-fundamentals)
+    awarder: Coursera / IBM
+    url: https://coursera.org/share/d217c2ee9082940b903d22e46d3e8062
+    date: '2023-03-10'
+    summary: |
   - title: Blockchain Fundamentals
     url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
     date: '2023-07-01'
