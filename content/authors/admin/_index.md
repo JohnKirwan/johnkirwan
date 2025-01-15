@@ -84,7 +84,7 @@ work:
     company_logo: ''
     date_start: 2022-07-04
     date_end: ''
-    summary: |3-
+    summary: |4-
       My current role focuses on pharmaceutical bioinformatics
       - Structural biology, using AlphaFold and related tools
       - Proteomics and other -omics approaches
