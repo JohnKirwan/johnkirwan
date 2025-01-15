@@ -35,7 +35,7 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        I am a life science researcher, interested in invertebrate vision, scientific data analysis and scientific communication. I carried out my doctoral research on spatial vision in simple visual systems at Lund University, Sweden. I am a Bioinformatics Scientist at Arquimea Research Centre, La Laguna, Spain. 
+        My current research focuses on data science in the lief science domain. 
     design:
       columns: '1'
   - block: collection
