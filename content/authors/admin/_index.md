@@ -98,17 +98,17 @@ work:
     date_end: 2022-06-22
     summary: Researched the photic behaviour of sea urchins as part of an international HFSP collaboration. Designed and carried out behavioural experiments and performed statistical analysis.
   - position: Project Manager - Vision Research
-  	company_name: Lund University
-  	company_url: http://www.lu.se
-  	date_start: 2019-06-01
-  	date_end: 2019-08-31
-  	summary: Carried out vision science behavioural experiments and analysis using R, Matlab and Python.
+    company_name: Lund University
+    company_url: http://www.lu.se
+    date_start: 2019-06-01
+    date_end: 2019-08-31
+    summary: Carried out vision science behavioural experiments and analysis using R, Matlab and Python.
   - position: Doctoral Researcher
   	company_name: Lund University
   	company_url: http://www.lu.se
   	date_start: 2013-05-15
   	date_end: 2018-06-07
-  	summary: Wrote my PhD thesis '[Spatial Vision in Diverse Invertebrates](https://portal.research.lu.se/portal/en/publications/spatial-vision-in-diverse-invertebrates(dc76fe19-18de-49e6-955a-47d1a084760c).html)' at the [Lund Vision Group](https://www.biology.lu.se/research/research-groups/lund-vision-group) in Sweden. 
+  	summary: Wrote my PhD thesis 'Spatial Vision in Diverse Invertebrates' at the Lund Vision Group, Sweden. 
   - position: Expedition Assistant Leader 
   	company_name: Lowest to Highest for Cancer Expedition
   	date_start: 2013-04-16
