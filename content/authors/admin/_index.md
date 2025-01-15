@@ -113,7 +113,7 @@ skills:
         description: ''
         percent: 100
         icon: chart-bar
-      - name: SQL
+      - name: R
         description: ''
         percent: 40
         icon: circle-stack
@@ -147,6 +147,12 @@ languages:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
+  - title: Getting started with TensorFlow 2
+    awarder: Coursera / Imperial College London
+    icon: coursera
+    url: https://www.coursera.org/learn/getting-started-with-tensor-flow2
+    certificate_url: https://www.coursera.org/account/accomplishments/records/WGHN9M3Y2Q7S
+    date: '2024-05-18'
   - title: Applied Software Engineering Fundamentals Specialization
     awarder: Coursera / IBM
     icon: coursera
