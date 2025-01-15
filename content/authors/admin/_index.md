@@ -155,6 +155,13 @@ awards:
     date: '2023-03-10'
     summary: |
       Covers Git, GitHub, Linux, and Python, and learn the fundamentals of Software Engineering.
+  - title: Mountain Leader Award
+    url: https://www.mountain-training.org/qualifications/walking/mountain-leader
+    awarder: Mountain Leader Training Scotland
+    certificate_url: https://mt.tahdah.me/profile/index/95316
+    date: '2011-10-01'
+    summary: Professional certification to lead hillwalking groups.
+
 
 ---
 
