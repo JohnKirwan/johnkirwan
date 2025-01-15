@@ -84,20 +84,37 @@ work:
     company_logo: ''
     date_start: 2022-07-04
     date_end: ''
-    summary: |2-
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    summary: |3-
+      My current role focuses on pharmaceutical bioinformatics
+      - Structural biology, using AlphaFold and related tools
+      - Proteomics and other -omics approaches
+      - Deep learning modeling, including Pytorch and Tensorflow
+      - Biostatistics and probabilistic modelling, using PyMC and Stan
   - position: Post-doctoral Researcher
     company_name: Stazione Zoologica Anton Dorhn, Naples, Italy
     company_url: 'http://www.szn.it'
     company_logo: ''
     date_start: 2019-10-01
     date_end: 2022-06-22
-    summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
+    summary: Researched the photic behaviour of sea urchins as part of an international HFSP collaboration. Designed and carried out behavioural experiments and performed statistical analysis.
+  - position: Project Manager - Vision Research
+  	company_name: Lund University
+  	company_url: http://www.lu.se
+  	date_start: 2019-06-01
+  	date_end: 2019-08-31
+  	summary:
+  - position: Doctoral Researcher
+  	company_name: Lund University
+  	company_url: http://www.lu.se
+  	date_start: 2013-05-15
+  	date_end: 2018-06-07
+  	summary: Wrote my PhD thesis '[Spatial Vision in Diverse Invertebrates](https://portal.research.lu.se/portal/en/publications/spatial-vision-in-diverse-invertebrates(dc76fe19-18de-49e6-955a-47d1a084760c).html)' at the [Lund Vision Group](https://www.biology.lu.se/research/research-groups/lund-vision-group) in Sweden. 
+  - position: Expedition Assistant Leader 
+  	company_name: Lowest to Highest for Cancer Expedition
+  	date_start: 2013-04-16
+  	date_end: 2013-05-10
+  	summary: Assistant Leader for Expedition to Everest Basecamp.
+
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
