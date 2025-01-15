@@ -1,6 +1,6 @@
 ---
-title: Teaching Portfolio - John D. Kirwan
-summary: Here we describe how to add a page to your site.
+title: Teaching Portfolio
+summary: 
 date: "2022-01-21T00:00:00Z"
 
 reading_time: false  # Show estimated reading time?
