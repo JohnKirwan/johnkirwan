@@ -59,7 +59,7 @@ education:
       Thesis 'Spatial Vision in Diverse Invertebrates'.
     button:
       text: 'Read Thesis'
-      url: 'https://example.com'
+      url: 'https://portal.research.lu.se/en/publications/spatial-vision-in-diverse-invertebrates'
   - area: MSc Molecular Evolution
     institution: University College Dublin
     date_start: 2016-01-01
