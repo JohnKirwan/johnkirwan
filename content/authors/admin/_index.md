@@ -52,8 +52,8 @@ interests:
   - Information Retrieval
 
 education:
-  - area: PhD Artificial Intelligence
-    institution: Stanford University
+  - area: PhD Sensory Biology
+    institution: Lund University
     date_start: 2016-01-01
     date_end: 2020-12-31
     summary: |
@@ -84,11 +84,11 @@ education:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
 work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
+  - position: Bioinformatics Researcher
+    company_name: Arquimea Research Centre
     company_url: ''
     company_logo: ''
-    date_start: 2021-01-01
+    date_start: 2022-07-02
     date_end: ''
     summary: |2-
       Responsibilities include:
@@ -104,8 +104,6 @@ work:
     summary: |
       Responsibilities include:
       - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -132,7 +130,7 @@ skills:
         description: ''
         percent: 60
         icon: person-simple-walk
-      - name: Cats
+      - name: Reading
         description: ''
         percent: 100
         icon: cat
@@ -144,9 +142,9 @@ skills:
 languages:
   - name: English
     percent: 100
-  - name: Chinese
-    percent: 75
-  - name: Portuguese
+  - name: Swedish
+    percent: 50
+  - name: Spanish
     percent: 25
 
 # Awards.
@@ -183,4 +181,4 @@ awards:
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+John Kirwan is...
