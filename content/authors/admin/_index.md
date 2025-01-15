@@ -79,22 +79,22 @@ education:
 
 work:
   - position: Bioinformatics Researcher
-    company_name: Arquimea Research Centre
-    company_url: ''
+    company_name: Arquimea Research Centre, La Laguna, Spain
+    company_url: 'https://www.arquimea.com/research-development-innovation/research-center/'
     company_logo: ''
-    date_start: 2022-07-02
+    date_start: 2022-07-04
     date_end: ''
     summary: |2-
       Responsibilities include:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
-    company_url: ''
+  - position: Post-doctoral Researcher
+    company_name: Stazione Zoologica Anton Dorhn, Naples, Italy
+    company_url: 'http://www.szn.it'
     company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+    date_start: 2019-10-01
+    date_end: 2022-06-22
     summary: |
       Responsibilities include:
       - Migrated infrastructure to a new data center
