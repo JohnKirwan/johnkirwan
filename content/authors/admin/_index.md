@@ -47,17 +47,16 @@ profiles:
     url: https://orcid.org/0000-0001-5537-3574
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Data Science
+  - Computational Biology
 
 education:
   - area: PhD Sensory Biology
     institution: Lund University
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+    date_start: 2013-05-01
+    date_end: 2018-05-07
     summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
+      Thesis 'Spatial Vision in Diverse Invertebrates'.
     button:
       text: 'Read Thesis'
       url: 'https://example.com'
