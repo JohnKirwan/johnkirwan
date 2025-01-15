@@ -104,16 +104,16 @@ work:
     date_end: 2019-08-31
     summary: Carried out vision science behavioural experiments and analysis using R, Matlab and Python.
   - position: Doctoral Researcher
-  	company_name: Lund University
-  	company_url: http://www.lu.se
-  	date_start: 2013-05-15
-  	date_end: 2018-06-07
-  	summary: Wrote my PhD thesis 'Spatial Vision in Diverse Invertebrates' at the Lund Vision Group, Sweden. 
+    company_name: Lund University
+    company_url: http://www.lu.se
+    date_start: 2013-05-15
+    date_end: 2018-06-07
+    summary: Wrote my PhD thesis 'Spatial Vision in Diverse Invertebrates' at the Lund Vision Group, Sweden. 
   - position: Expedition Assistant Leader 
-  	company_name: Lowest to Highest for Cancer Expedition
-  	date_start: 2013-04-16
-  	date_end: 2013-05-10
-  	summary: Assistant Leader for Expedition to Everest Basecamp.
+    company_name: Lowest to Highest for Cancer Expedition
+    date_start: 2013-04-16
+    date_end: 2013-05-10
+    summary: Assistant Leader for Expedition to Everest Basecamp.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
