@@ -102,7 +102,7 @@ work:
   	company_url: http://www.lu.se
   	date_start: 2019-06-01
   	date_end: 2019-08-31
-  	summary:
+  	summary: Carried out vision science behavioural experiments and analysis using R, Matlab and Python.
   - position: Doctoral Researcher
   	company_name: Lund University
   	company_url: http://www.lu.se
@@ -114,7 +114,6 @@ work:
   	date_start: 2013-04-16
   	date_end: 2013-05-10
   	summary: Assistant Leader for Expedition to Everest Basecamp.
-
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
