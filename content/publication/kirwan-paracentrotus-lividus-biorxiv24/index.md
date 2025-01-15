@@ -24,9 +24,9 @@ We carried out behavioural trials in which individuals were placed in a submerge
 We modelled the visual and neuronal processes to recapitulate these responses in P. lividus, by fine-tuning the model of Li et al. (2022), as applied to the sea urchin Diadema africanum. While these species differ morphologically, the model robustly predicts angular sensitivity in keeping with the behavioural experiments. We find that P. lividus (and likely many Echinacea) possesses coarse spatial vision and that the neurosensory model applies broadly to sea urchins.
 
 # Summary. An optional shortened abstract.
-summary: 
+# summary: 
 
-tags:
+# tags: []
 
 featured: false
 
