@@ -42,7 +42,7 @@ profiles:
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/johndkirwan
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/
+    url: https://scholar.google.com/citations?user=b2UN4cEAAAAJ
   - icon: academicons/orcid
     url: https://orcid.org/0000-0001-5537-3574
 
@@ -62,20 +62,16 @@ education:
       url: 'https://portal.research.lu.se/en/publications/spatial-vision-in-diverse-invertebrates'
   - area: MSc Molecular Evolution
     institution: University College Dublin
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+    date_start: 2010-06-01
+    date_end: 2008-12-09
     summary: |
-      GPA: 3.8/4.0
-
+      Thesis: 'The Molecular Evolution of Hearing in Mammals'
   - area: BSc (Hons) Zoology
     institution: University College Dublin
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+    date_start: 2004-09-12
+    date_end: 2008-05-31
     summary: |
-      GPA: 3.4/4.0
-      
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      GPA: 4.02/4.2
 
 work:
   - position: Bioinformatics Researcher
