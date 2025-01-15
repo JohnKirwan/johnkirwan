@@ -66,8 +66,8 @@ education:
       url: 'https://portal.research.lu.se/en/publications/spatial-vision-in-diverse-invertebrates'
   - area: MSc Molecular Evolution
     institution: University College Dublin
-    date_start: 2010-06-01
-    date_end: 2008-12-09
+    date_start: 2008-12-09
+    date_end: 2010-06-01
     summary: |
       Thesis: 'The Molecular Evolution of Hearing in Mammals'
   - area: BSc (Hons) Zoology
