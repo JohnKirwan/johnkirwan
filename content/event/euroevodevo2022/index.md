@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: " Spine and sight: The sea urchin Paracentrotus lividus can see"
-event: Euro Evo Devo conference 2022.
+title: "The sea urchin Paracentrotus lividus can see"
+event: Euro Evo Devo conference 2022
 event_url: https://evodevo.eu/naples-2022/
 location:
 address:

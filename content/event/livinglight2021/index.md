@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: " Spine and sight: The sea urchin Paracentrotus lividus can see"
-event: Living Light conference 2021.
+title: "Spine and sight: The sea urchin Paracentrotus lividus can see"
+event: Living Light conference 2021
 event_url: https://www.livinglight-conference.org/
 location:
 address:
