@@ -78,4 +78,4 @@ links:
 
 
 
-[Graphical abstract](https://www.frontiersin.org/files/Articles/1548208/fevo-13-1548208-HTML/image_m/fevo-13-1548208-g007.jpg)
+![Graphical abstract](https://www.frontiersin.org/files/Articles/1548208/fevo-13-1548208-HTML/image_m/fevo-13-1548208-g007.jpg)
