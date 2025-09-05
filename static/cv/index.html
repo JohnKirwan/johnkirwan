@@ -1,0 +1,273 @@
+<style>
+  /* Reset & base */
+  :root { --muted:#555; --rule:#e5e5e5; }
+  html, body { margin:0; padding:0; }
+  body { font:15px/1.45 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif; color:#111; }
+  img { max-width:100%; height:auto; }
+
+  /* Layout (flexible on screen) */
+  .cv {
+    display:grid;
+    grid-template-columns: 180px 1fr;   /* sidebar | main */
+    gap:24px;
+    align-items:start;
+    padding:16px 20px;
+    margin:0 auto;                      /* centered on wide screens */
+  }
+  .sidebar {
+    background:#f7f7f7;
+    border-radius:8px;
+    padding:12px;
+  }
+  /* Main column readability constraints */
+  .main {
+  min-width: 0;
+  max-width: 700px;        /* keep lines readable on wide monitors */
+  line-height: 1.5;
+  overflow-wrap: anywhere; /* break very long words/URLs */
+  word-break: normal;
+  }
+
+  /* Headings */
+  h1 { font-size:28px; line-height:1.2; margin:0 0 6px; font-weight:700; }
+  .subhead { color:var(--muted); margin:0 0 18px; font-weight:600; }
+  h2 { margin:22px 0 10px; font-size:12px; letter-spacing:.12em; color:var(--muted); font-weight:700; text-transform:uppercase; }
+  h3 { margin:14px 0 6px; font-size:14px; font-weight:700; }
+
+  /* Section rule */
+  .rule { border:0; border-top:1px solid var(--rule); margin:12px 0 14px; }
+
+  /* Sidebar bits */
+  .portrait { width:100%; max-width:175px; border-radius:10px; display:block; margin:0 auto 12px; }
+  .row { display:flex; align-items:center; gap:8px; margin:6px 0; }
+  .icon { width:18px; height:18px; vertical-align:middle; flex:none; }
+  .chip { display:inline-block; padding:4px 8px; border-radius:999px; background:#e9e9e9; margin:3px 6px 6px 0; font-size:13px; }
+  a { color:inherit; text-decoration:none; }
+  .chip--icon { display:inline-flex; align-items:center; gap:6px; }
+
+  /* Bullets (main column only) */
+  .main ul { list-style:none; margin:6px 0 10px 0; padding-left:0; }
+  .main ul li { margin:0; }
+  .main ul li::before { content:"• "; color:#666; font-weight:700; }
+
+  /* Responsive */
+  @media (max-width: 800px){
+    .cv{ grid-template-columns:1fr; }
+    .sidebar{ order:-1; }
+  }
+
+  /* Print: constrain to A4 */
+  @page { size: A4; margin: 20mm; }
+
+
+  @media print {
+    @page { size: A4; margin: 20mm; }
+    html, body { background:#fff; }
+
+    /* Use floats for print (Firefox can paginate these; Grid can't) */
+    .cv{ display:block !important; }
+
+    .sidebar{
+      float:left;
+      width:180px;           /* fixed, prevents expansion */
+      margin:0 16px 0 0;     /* gap to main */
+      background:#fff;
+      border:1px solid #ddd;
+      box-sizing:border-box;
+    }
+
+    .main{
+      float:left;
+      width:calc(100% - 180px - 16px);
+      box-sizing:border-box;
+    }
+
+    /* Clear floats at the end of .cv so content below doesn't wrap */
+    .cv::after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    /* Reliable manual page breaks */
+    .page-break{
+      display:block;
+      break-before: page !important;
+      page-break-before: always;        /* legacy */
+      height:0; margin:0; padding:0; border:0;
+      clear:both;                       /* start next page cleanly */
+    }
+
+    /* Avoid ugly splits inside chunks */
+    h2, h3, .rule, ul, p { break-inside: avoid; page-break-inside: avoid; }
+
+    /* Tidy links and images on paper */
+    a{ color:#000; text-decoration:none; }
+    img{ max-width:100%; height:auto; }
+
+    /* Make chip links print-safe (Firefox PDF keeps the hyperlink) */
+    a.chip, .chip a{
+      display:inline !important;         /* no inline-block in print */
+      padding:0 !important;
+      background:none !important;
+      border-radius:0 !important;
+      box-shadow:none !important;
+      /* text-decoration: underline !important; */
+      color:#000 !important;
+      outline:0.01pt solid transparent !important; /* forces a tangible box */
+    }
+
+    /* General nudge that helps Firefox retain link boxes */
+    a[href]{
+      position:relative; 
+      z-index:0;
+      outline:0.01pt solid transparent;  /* harmless, improves retention */
+    }
+
+    /* Avoid odd word-wrapping around links in print */
+    .main{
+      overflow-wrap: normal !important;
+      word-break: break-word !important;
+    }
+  }
+
+</style>
+
+<div class="cv">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <img src="portrait.jpeg" alt="Portrait of John Kirwan" class="portrait">
+    </br>
+
+    <div class="row">☎ <a href="tel:+34639981732">+34 639981732</a></div>
+
+    <div class="row">
+      <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/minutemailer.svg" alt="Email">
+      <a href="mailto:john@jkirwan.org">john@jkirwan.org</a>
+    </div>
+
+    <div class="row">
+      <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/homeassistant.svg" alt="Homepage">
+      <a href="https://jkirwan.org">jkirwan.org</a>
+    </div>
+
+    <div class="row">
+      <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+      <a href="https://github.com/JohnKirwan">JohnKirwan</a>
+    </div>
+
+    <div class="row">
+      <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+      <a href="https://www.linkedin.com/in/johndkirwan">johndkirwan</a>
+    </div>
+
+    <div class="row">
+      <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/orcid.svg" alt="ORCID">
+      <a href="https://orcid.org/0000-0001-5537-3574">0001-5537-3574</a>
+    </div></br>
+
+    <h2>Key Skills</h2>
+    <div>
+      <span class="chip"><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/XJFRDC77UEFY">Python</a></span>
+      <span class="chip">R</span><span class="chip">Git</span><span class="chip">PyTorch</span><span class="chip">Boltz</span>
+      <span class="chip">Docker</span><span class="chip"><a href="https://learn.valohai.academy/certificate/NCXTeIcmIw">Valohai</a></span>
+    </div>
+
+    <h2>Language</h2>
+    <div>
+      <span class="chip">Native English Speaker</span>
+      <span class="chip"><a href="https://sede.fg.ull.es/csv/9D62E2C7-BEDC-4986-BA68-28096161F88C">B2 Spanish</a> & Swedish</span>
+    </div></br>
+  
+    <!-- </br>
+    <div>
+      🚗 EU B driving licence
+    </div> -->
+
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <h1>John Kirwan, PhD</h1>
+    <div class="subhead">Computational Biologist and Senior Scientist</div>
+
+    <hr class="rule">
+
+    <div>
+      Extensive experience in computational biology and machine learning applied to drug discovery and biological research.
+    </div>
+
+    <h2>Experience</h2>
+
+    <h3>Bioinformatics Scientist — <em>Arquimea Research Centre, La Laguna, Spain</em> (Jul 2022–present)</h3>
+    <ul>
+      <li>Senior Scientist in AI, collaborating with Biochem</li>
+      <li>Develop and maintain data workflows for biological data</li>
+      <li>Track advances in bioinformatics, ML, and drug discovery</li>
+    </ul>
+
+    <h3>Postdoctoral Researcher — <em>Stazione Zoologica Anton Dohrn, Naples, Italy</em> (2019–2022)</h3>
+    <ul>
+      <li>Ran behavioral experiments to assess visual capabilities</li>
+      <li>Performed Bayesian statistical analyses</li>
+    </ul>
+
+    <h3>Project Manager — <em>Lund University, Sweden</em> (Jun–Aug 2019)</h3>
+    <ul>
+      <li>Designed and ran vision science behavioural experiments using R and Matlab. Co-advised MSc student.</li>
+    </ul>
+
+    <h3>Doctoral Researcher — <em>Lund University, Sweden</em> (2013–2018)</h3>
+    <ul>
+      <li>PhD on simple visual systems using R, Matlab, and Python</li>
+      <li>Interdisciplinary work combining optics and statistics</li>
+      <li>Developed novel methods to measure spatial resolution</li>
+      <li>Applied Bayesian multilevel regression models</li>
+    </ul>
+    <hr class="rule">
+
+    <h2>Education</h2>
+
+    <h3>PhD — <em>Lund University, Sweden</em> (2013–2018)</h3>
+    <ul>
+      <li>Thesis: <a href="https://portal.research.lu.se/en/publications/spatial-vision-in-diverse-invertebrates">Spatial Vision in Diverse Invertebrates</a></li>
+    </ul>
+
+    <h3>M.Sc. by Research — <em>University College Dublin, Ireland</em> (2008–2010)</h3>
+    <ul>
+      <li>Thesis: The Molecular Evolution of Hearing in Mammals</li>
+    </ul>
+
+    <h3>B.Sc. (Hons) Zoology — <em>University College Dublin, Ireland</em> (2005–2008)</h3>
+    <ul>
+      <li>First Class Honours (Distinction)</li>
+    </ul>
+    <!-- 
+    <hr class="rule">
+
+    <div class="page-break"></div>
+
+    <h2>Selected Certifications</h2>
+    <ul>
+      <li><em><a href="https://learn.valohai.academy/certificate/NCXTeIcmIw">Valohai MLOps Fundamentals</a></em> — Valohai (2025)</li>
+      <li><em>Customizing your Models with Tensorflow 2</em> — Imperial College London (2025)</li>
+      <li><em>Applied Software Engineering Fundamentals Specialization</em> — IBM (2023)</li>
+      <li><em>Applied Pharmaceutical Bioinformatics</em> — Uppsala University (2020)</li>
+      <li><em>Writing in the Sciences</em> — Stanford Online (2019)</li>
+      <li><em><a href="https://mt.tahdah.me/profile/index/95316">Mountain Leader Award</a></em> — Mountain Training (2011)</li>
+      <li><em>🚗 EU B driving licence</li>
+    </ul>
+    <hr class="rule">
+
+    <h2>Selected Publications</h2>
+    <ul>
+      <li>Phenotypic response to food availability in sea urchin larvae and impact of light during development and growth, <em>Frontiers in Ecology and Evolution</em> (2025)</li>
+      <li>A model of decentralized vision in the sea urchin <em>Diadema africanum</em>, <em>iScience</em> (2023)</li>
+      <li>Extraocular Vision in a Brittle Star Is Mediated by Chromatophore Movement in Response to Ambient Light, <em>Current Biology</em> (2020)</li>
+      <li>A millipede compound eye mediating low-resolution vision, <em>Vision Research</em> (2019)</li>
+      <li>The sea urchin <em>Diadema africanum</em> uses low resolution vision to find shelter and deter enemies, <em>Journal of Experimental Biology</em> (2018)</li>
+      <li>A phylomedicine approach to understanding the evolution of auditory sensory perception and disease in mammals, <em>Evolutionary Applications</em> (2013)</li>
+    </ul> -->
+  </div>
+</div>
