@@ -162,12 +162,18 @@ languages:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: Getting started with TensorFlow 2
+  - title: Customising your models with TensorFlow 2
     awarder: Coursera / Imperial College London
     icon: coursera
-    url: https://www.coursera.org/learn/getting-started-with-tensor-flow2
-    certificate_url: https://www.coursera.org/account/accomplishments/records/WGHN9M3Y2Q7S
-    date: '2024-05-18'
+    url: https://www.coursera.org/learn/customising-models-tensorflow2
+    certificate_url: https://www.coursera.org/account/accomplishments/verify/Y334QC7PYYL6
+    date: '2025-08-14'
+  - title: Valohai MLOps Fundamentals Certification
+    awarder: Valohai
+    icon: simpleicons/valohai
+    url: https://learn.valohai.academy/collections/efa3043e-5a9f-11ed-8850-06c0361096e5
+    certificate_url: https://learn.valohai.academy/certificate/NCXTeIcmIw
+    date: '2025-08-12'
   - title: Applied Software Engineering Fundamentals Specialization
     awarder: Coursera / IBM
     icon: coursera
