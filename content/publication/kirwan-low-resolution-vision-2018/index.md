@@ -40,7 +40,7 @@ image:
 projects: []
 publishDate: '2020-11-16T21:30:44.652338Z'
 publication_types:
-- '2'
+- article-journal
 abstract: Skip to Next Section Onychophorans, also known as velvet worms, possess
   a pair of simple lateral eyes, and are a key lineage with regard to the evolution
   of vision. They resemble ancient Cambrian forms, and are closely related to arthropods,

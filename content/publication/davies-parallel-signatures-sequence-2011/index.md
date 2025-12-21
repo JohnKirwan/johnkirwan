@@ -50,7 +50,7 @@ image:
 projects: []
 publishDate: '2020-11-16T21:30:43.547970Z'
 publication_types:
-- '2'
+- article-journal
 abstract: Recent findings of sequence convergence in the Prestin gene among some bats
   and cetaceans suggest that parallel adaptations for high-frequency hearing have
   taken place during the evolution of echolocation. To determine if this gene is an

@@ -35,7 +35,7 @@ image:
 projects: []
 publishDate: '2020-11-16T21:30:41.700705Z'
 publication_types:
-- '2'
+- article-journal
 abstract: ''
 publication: '*Evolutionary Applications*'
 url_pdf: http://doi.wiley.com/10.1111/eva.12047
