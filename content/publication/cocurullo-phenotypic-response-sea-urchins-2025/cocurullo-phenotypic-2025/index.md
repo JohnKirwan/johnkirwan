@@ -71,9 +71,8 @@ image:
 #   Otherwise, set `projects: []`.
 projects: []
 links:
-- name: URL
-  url: 
-    https://www.frontiersin.orghttps://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2025.1548208/full
+- name: Article
+  url: https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2025.1548208/full
 ---
 
 
