@@ -29,7 +29,7 @@ image:
 projects: []
 publishDate: '2020-11-16T21:30:46.869073Z'
 publication_types:
-- '7'
+- thesis
 abstract: 'Light-detection provides incomparabaly rapid information at a range of
   time scales and, consequently, directional photoreception is found in almost every
   major metazoan clade. Conversely, a much smaller cohort have evolved sophisticated

@@ -35,7 +35,7 @@ image:
 projects: []
 publishDate: '2020-11-16T21:30:42.497301Z'
 publication_types:
-- '2'
+- article-journal
 abstract: 'Many sea urchins can detect light on their body surface
   and some species are reported to possess image-resolving vision. Here, we measure
   the spatial resolution of vision in the long-spined sea urchin Diadema africanum,
