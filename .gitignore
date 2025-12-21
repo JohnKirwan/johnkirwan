@@ -5,6 +5,8 @@ resources/
 hugo_stats.json
 
 # Node
-package-lock.json
 node_modules/
 
+# Hugo tooling artifacts
+package.hugo.json
+assets/jsconfig.json
