@@ -198,4 +198,4 @@ awards:
 
 ## About Me
 
-I am a life science researcher, interested in invertebrate vision, scientific data analysis and scientific communication. I carried out my doctoral research on spatial vision in simple visual systems at Lund University, Sweden. I am a postdoc at Arquimea Research Centre, La Laguna, Spain.
+I am a life science researcher, interested in invertebrate vision, scientific data analysis and scientific communication. I carried out my doctoral research on spatial vision in simple visual systems at Lund University, Sweden. I am a senior scientist at Arquimea Research Centre, La Laguna, Spain.
