@@ -4,19 +4,19 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Experience
-    identifier: aVK9WJ72
-    url: experience/
-    weight: 10
-  - name: CV
-    identifier: ktytrxFc
-    url: cv/
-    weight: 20
-  - name: Papers
-    identifier: G3rTV2to
-    url: /#papers
-    weight: 30
   - name: Bio
     identifier: J8X1H6BP
     url: /bio
+    weight: 10
+  - name: Experience
+    identifier: aVK9WJ72
+    url: experience/
+    weight: 20
+  - name: CV
+    identifier: ktytrxFc
+    url: cv/
+    weight: 30
+  - name: Papers
+    identifier: G3rTV2to
+    url: /#papers
     weight: 40
