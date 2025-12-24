@@ -198,4 +198,8 @@ awards:
 
 ## Bio
 
-I am a life science researcher, interested in scientific data analysis and scientific communication. I am a senior scientist at Arquimea Research Centre, La Laguna, Spain.
+I'm a computational biologist working at the interface of data science and biology — applying statistical and machine learning approaches to uncover structure in complex biological data. I am a senior scientist at Arquimea Research Centre, La Laguna, Spain.
+
+My background spans experimental biology, computational modeling, and bioinformatics. After completing a PhD at Lund University focused on visual systems in invertebrates, I transitioned toward data-driven biology — developing analytical tools and predictive models that bridge biological insight and computation.
+
+I enjoy learning new analytical methods, writing code, and communicating science clearly. My goal is to continue growing as a biological data scientist, expanding across diverse fields within the life sciences while keeping biological meaning at the core of the analysis.
