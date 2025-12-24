@@ -62,6 +62,10 @@ abstract: Skip to Next Section Onychophorans, also known as velvet worms, posses
   is likely to be sufficient to find shelter and suitable microhabitats from further
   away. To our knowledge, this is the first evidence of resolving vision in an onychophoran.
 publication: '*Journal of Experimental Biology*'
-url_pdf: http://jeb.biologists.org/content/221/11/jeb175802
-doi: 10.1242/jeb.175802
+hugoblox:
+  ids:
+    doi: 10.1242/jeb.175802
+links:
+- type: pdf
+  url: http://jeb.biologists.org/content/221/11/jeb175802
 ---

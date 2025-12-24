@@ -55,6 +55,10 @@ abstract: 'Many sea urchins can detect light on their body surface
   black circles of 13–25 deg angular width, corresponding to an acceptance angle of
   60–116 deg, assuming the same contrast threshold as above.'
 publication: '*Journal of Experimental Biology*'
-url_pdf: http://jeb.biologists.org/content/221/14/jeb176271
-doi: 10.1242/jeb.176271
+hugoblox:
+  ids:
+    doi: 10.1242/jeb.176271
+links:
+- type: pdf
+  url: http://jeb.biologists.org/content/221/14/jeb176271
 ---

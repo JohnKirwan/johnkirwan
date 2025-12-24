@@ -38,6 +38,10 @@ publication_types:
 - article-journal
 abstract: ''
 publication: '*Evolutionary Applications*'
-url_pdf: http://doi.wiley.com/10.1111/eva.12047
-doi: 10.1111/eva.12047
+hugoblox:
+  ids:
+    doi: 10.1111/eva.12047
+links:
+- type: pdf
+  url: http://doi.wiley.com/10.1111/eva.12047
 ---
