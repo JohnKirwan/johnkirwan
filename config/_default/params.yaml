@@ -26,6 +26,10 @@ hugoblox:
     align: center
     search: true
     theme_toggle: true
+    navbar:
+      logo:
+        filename: logo.png
+        text: ""
   footer:
     style: minimal
     language_switcher: true
