@@ -62,5 +62,7 @@ abstract: 'Light-detection provides incomparabaly rapid information at a range o
   73° for the flatworm S. lugubris. These modest proposed ranges of spatial resolution
   are nonetheless sufficient for the visual tasks employed by these animals.'
 publication: ''
-url_pdf: https://portal.research.lu.se/portal/en/publications/spatial-vision-in-diverse-invertebrates(dc76fe19-18de-49e6-955a-47d1a084760c).html
+links:
+- type: pdf
+  url: https://portal.research.lu.se/portal/en/publications/spatial-vision-in-diverse-invertebrates(dc76fe19-18de-49e6-955a-47d1a084760c).html
 ---

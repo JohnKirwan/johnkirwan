@@ -69,6 +69,10 @@ abstract: Recent findings of sequence convergence in the Prestin gene among some
   and molecular adaptation in two additional hearing genes suggest that the acquisition
   of high-frequency hearing has involved multiple loci.
 publication: '*Heredity*'
-url_pdf: http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Citation&list_uids=22167055
-doi: 10.1038/hdy.2011.119
+hugoblox:
+  ids:
+    doi: 10.1038/hdy.2011.119
+links:
+- type: pdf
+  url: http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Citation&list_uids=22167055
 ---
