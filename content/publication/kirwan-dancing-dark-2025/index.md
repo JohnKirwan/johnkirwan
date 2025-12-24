@@ -18,7 +18,7 @@ hugoblox:
 links:
 - type: doi
   url: https://doi.org/10.1242/jeb.251047
-featured: true
+featured: false
 draft: false
 summary: ''
 bibfile: cite.bib
