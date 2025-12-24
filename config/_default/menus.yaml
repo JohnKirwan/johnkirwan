@@ -6,7 +6,7 @@
 main:
   - name: Bio
     identifier: J8X1H6BP
-    url: /author/admin/
+    url: /
     weight: 10
   - name: Experience
     identifier: aVK9WJ72
