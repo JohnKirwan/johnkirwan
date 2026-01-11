@@ -1,13 +1,13 @@
 hugoblox:
   schema: "2.0"
   identity:
-    name: John D. Kirwan
+    name: D. John D. Kirwan
     type: person
     tagline: Bioinformatics Scientist
-    description: I am a life science researcher working at the interface of data science and biology.
+    description: ""
   theme:
     mode: system
-    pack: marine
+    pack: matcha
     colors:
       primary: ""
       secondary: ""
@@ -26,10 +26,6 @@ hugoblox:
     align: center
     search: true
     theme_toggle: true
-    navbar:
-      logo:
-        filename: logo.png
-        text: ""
   footer:
     style: minimal
     language_switcher: true
