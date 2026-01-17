@@ -14,7 +14,7 @@ main:
     weight: 20
   - name: CV
     identifier: ktytrxFc
-    url: cv/
+    url: /uploads/resume.pdf
     weight: 30
   - name: Papers
     identifier: G3rTV2to
