@@ -54,3 +54,6 @@ security:
   _merge: deep
 sitemap:
   _merge: deep
+ignoreLogs:
+  - missing-icon-hero-coursera
+  - missing-icon-simpleicons-valohai

@@ -9,5 +9,8 @@
     "tailwindcss": "^4.0.0"
   },
   "name": "johnkirwan",
+  "scripts": {
+    "dev": "PATH=/snap/bin:$PATH hugo server -D"
+  },
   "version": "0.1.0"
 }
