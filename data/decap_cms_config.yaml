@@ -1,0 +1,120 @@
+backend:
+  name: git-gateway
+  branch: main
+  squash_merges: true
+media_folder: static/uploads
+public_folder: /uploads
+collections:
+  - name: site
+    label: Site Content
+    files:
+      - name: profile
+        label: Profile
+        file: content/authors/admin/_index.md
+        fields:
+          - {label: Display Name, name: title, widget: string}
+          - {label: First Name, name: first_name, widget: string, required: false}
+          - {label: Last Name, name: last_name, widget: string, required: false}
+          - {label: Role, name: role, widget: string, required: false}
+          - {label: Highlight Name, name: highlight_name, widget: boolean, required: false, default: true}
+          - {label: Superuser, name: superuser, widget: boolean, required: false, default: true}
+          - label: Organizations
+            name: organizations
+            widget: list
+            required: false
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: URL, name: url, widget: string, required: false}
+          - label: Profiles
+            name: profiles
+            widget: list
+            required: false
+            fields:
+              - {label: Icon, name: icon, widget: string}
+              - {label: URL, name: url, widget: string}
+              - {label: Label, name: label, widget: string, required: false}
+          - {label: Interests, name: interests, widget: list, required: false}
+          - label: Education
+            name: education
+            widget: list
+            required: false
+            fields:
+              - {label: Area, name: area, widget: string}
+              - {label: Institution, name: institution, widget: string}
+              - {label: Start Date, name: date_start, widget: string, required: false}
+              - {label: End Date, name: date_end, widget: string, required: false}
+              - {label: Summary, name: summary, widget: markdown, required: false}
+              - label: Button
+                name: button
+                widget: object
+                required: false
+                fields:
+                  - {label: Text, name: text, widget: string, required: false}
+                  - {label: URL, name: url, widget: string, required: false}
+          - label: Work
+            name: work
+            widget: list
+            required: false
+            fields:
+              - {label: Position, name: position, widget: string}
+              - {label: Company Name, name: company_name, widget: string}
+              - {label: Company URL, name: company_url, widget: string, required: false}
+              - {label: Company Logo, name: company_logo, widget: string, required: false}
+              - {label: Start Date, name: date_start, widget: string, required: false}
+              - {label: End Date, name: date_end, widget: string, required: false}
+              - {label: Summary, name: summary, widget: markdown, required: false}
+          - label: Skills
+            name: skills
+            widget: list
+            required: false
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Color, name: color, widget: string, required: false}
+              - {label: Border Color, name: color_border, widget: string, required: false}
+              - label: Items
+                name: items
+                widget: list
+                required: false
+                fields:
+                  - {label: Name, name: name, widget: string}
+                  - {label: Description, name: description, widget: string, required: false}
+                  - {label: Percent, name: percent, widget: number, value_type: int, required: false}
+                  - {label: Icon, name: icon, widget: string, required: false}
+          - label: Languages
+            name: languages
+            widget: list
+            required: false
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Percent, name: percent, widget: number, value_type: int, required: false}
+          - label: Awards
+            name: awards
+            widget: list
+            required: false
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Awarder, name: awarder, widget: string}
+              - {label: Icon, name: icon, widget: string, required: false}
+              - {label: URL, name: url, widget: string, required: false}
+              - {label: Certificate URL, name: certificate_url, widget: string, required: false}
+              - {label: Date, name: date, widget: string, required: false}
+              - {label: Summary, name: summary, widget: markdown, required: false}
+          - {label: Bio, name: body, widget: markdown, required: false}
+      - name: teaching
+        label: Teaching
+        file: content/teaching/_index.md
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Summary, name: summary, widget: string, required: false}
+          - {label: Show Profile, name: profile, widget: boolean, required: false, default: true}
+          - {label: Show Reading Time, name: reading_time, widget: boolean, required: false, default: false}
+          - {label: Show Share Links, name: share, widget: boolean, required: false, default: false}
+          - {label: Show Comments, name: comments, widget: boolean, required: false, default: false}
+          - label: Header
+            name: header
+            widget: object
+            required: false
+            fields:
+              - {label: Caption, name: caption, widget: string, required: false}
+              - {label: Image, name: image, widget: string, required: false}
+          - {label: Body, name: body, widget: markdown, required: false}

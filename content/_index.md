@@ -30,14 +30,14 @@ sections:
           size: cover
           position: center
           parallax: false
-  # - block: markdown
-  #   content:
-  #     title: '📚 My Research'
-  #     subtitle: ''
-  #     text: |-
-  #       My current research focuses on data science in the life science domain. 
-  #   design:
-  #     columns: '1'
+  - block: markdown
+    content:
+      title: '📚 My Research'
+      subtitle: ''
+      text: |-
+        My current research focuses on data science in the life science domain. 
+    design:
+      columns: '1'
   - block: collection
     id: papers
     content:
@@ -59,16 +59,16 @@ sections:
         exclude_featured: false
     design:
       view: citation
-  # - block: collection
-  #   id: talks
-  #   content:
-  #     title: Recent & Upcoming Talks
-  #     filters:
-  #       folders:
-  #         - event
-  #   design:
-  #     view: article-grid
-  #     columns: 1
+  - block: collection
+    id: talks
+    content:
+      title: Recent & Upcoming Talks
+      filters:
+        folders:
+          - event
+    design:
+      view: article-grid
+      columns: 1
   # - block: collection
   #   id: news
   #   content:
