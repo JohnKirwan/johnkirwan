@@ -1,0 +1,119 @@
+title: Dr. John D. Kirwan
+
+name:
+  display: Dr. John D. Kirwan
+  given: John D.
+  family: Kirwan
+
+superuser: true
+is_owner: true
+status: {}
+
+role: Bioinformatics Scientist
+
+affiliations:
+  - name: Arquimea Research Centre
+    url: https://www.arquimea.com/
+
+links:
+  - icon: brands/github
+    url: https://github.com/JohnKirwan
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/johndkirwan
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/John-Kirwan-6
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=b2UN4cEAAAAJ
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0001-5537-3574
+
+bio: |-
+  I'm a computational biologist working at the interface of data science and biology - applying statistical and machine learning approaches to uncover structure in complex biological data. I am a senior scientist at Arquimea Research Centre, La Laguna, Spain.
+
+  My background spans experimental biology, computational modeling, and bioinformatics. After completing a PhD at Lund University focused on visual systems in invertebrates, I transitioned toward data-driven biology - developing analytical tools and predictive models that bridge biological insight and computation.
+
+  I enjoy learning new analytical methods, writing code, and communicating science clearly. My goal is to continue growing as a biological data scientist, expanding across diverse fields within the life sciences while keeping biological meaning at the core of the analysis.
+
+interests:
+  - Data Science
+  - Computational Biology
+
+education:
+  - degree: PhD
+    area: Sensory Biology
+    institution: Lund University
+    date_start: 2013-05-01
+    date_end: 2018-05-07
+  - degree: MSc
+    area: Molecular Evolution
+    institution: University College Dublin
+    date_start: 2008-12-09
+    date_end: 2010-06-01
+  - degree: BSc (Hons)
+    area: Zoology
+    institution: University College Dublin
+    date_start: 2004-09-12
+    date_end: 2008-05-31
+
+experience:
+  - position: Bioinformatics Researcher
+    company_name: Arquimea Research Centre
+    company_url: https://www.arquimea.com/research-development-innovation/research-center/
+    date_start: 2022-07-04
+    date_end: ''
+    summary: |-
+      My current role focuses on pharmaceutical bioinformatics.
+      - Structural biology, using AlphaFold and related tools
+      - Proteomics and other -omics approaches
+      - Deep learning modeling, including Pytorch and Tensorflow
+      - Biostatistics and probabilistic modelling, using PyMC and Stan
+  - position: Post-doctoral Researcher
+    company_name: Stazione Zoologica Anton Dohrn
+    company_url: http://www.szn.it
+    date_start: 2019-10-01
+    date_end: 2022-06-22
+    summary: Researched the photic behaviour of sea urchins as part of an international HFSP collaboration. Designed and carried out behavioural experiments and performed statistical analysis.
+  - position: Project Manager - Vision Research
+    company_name: Lund University
+    company_url: http://www.lu.se
+    date_start: 2019-06-01
+    date_end: 2019-08-31
+    summary: Carried out vision science behavioural experiments and analysis using R, Matlab and Python.
+  - position: Doctoral Researcher
+    company_name: Lund University
+    company_url: http://www.lu.se
+    date_start: 2013-05-15
+    date_end: 2018-06-07
+    summary: Wrote my PhD thesis 'Spatial Vision in Diverse Invertebrates' at the Lund Vision Group, Sweden.
+
+skills:
+  - name: Technical Skills
+    items:
+      - name: Python
+        percent: 80
+        icon: code-bracket
+      - name: Data Science
+        percent: 100
+        icon: chart-bar
+      - name: R
+        percent: 40
+        icon: circle-stack
+
+languages:
+  - name: English
+    percent: 100
+  - name: Swedish
+    percent: 50
+  - name: Spanish
+    percent: 50
+
+awards:
+  - title: Customising your models with TensorFlow 2
+    awarder: Coursera / Imperial College London
+    date: '2025-08-14'
+  - title: Valohai MLOps Fundamentals Certification
+    awarder: Valohai
+    date: '2025-08-12'
+  - title: Applied Software Engineering Fundamentals Specialization
+    awarder: Coursera / IBM
+    date: '2023-03-10'

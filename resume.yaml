@@ -1,0 +1,247 @@
+schema_version: 1
+
+basics:
+  display_name: "Dr. John D. Kirwan"
+  first_name: "John D."
+  last_name: "Kirwan"
+  suffix: "PhD"
+  headline: "Computational Biologist and Senior Scientist"
+  role: "Bioinformatics Scientist"
+  email: "john@jkirwan.org"
+  phone: "+34 639981732"
+  website: "https://jkirwan.org"
+  location: "La Laguna, Spain"
+  summary: |
+    Computational biologist working at the interface of data science and biology,
+    applying statistical and machine learning approaches to uncover structure in
+    complex biological data.
+
+photo:
+  path: "content/authors/admin/avatar.jpg"
+  alt: "John Kirwan"
+  width_px: 160
+  width_mm: 32
+  include_in_markdown: true
+  include_in_pdf: true
+
+site:
+  superuser: true
+  highlight_name: true
+  organizations:
+    - name: "Arquimea Research Centre"
+      url: "https://www.arquimea.com/"
+  interests:
+    - "Data Science"
+    - "Computational Biology"
+
+profiles:
+  - label: "GitHub"
+    network: "github"
+    username: "JohnKirwan"
+    url: "https://github.com/JohnKirwan"
+    icon: "brands/github"
+    include_in_pdf: true
+  - label: "LinkedIn"
+    network: "linkedin"
+    username: "johndkirwan"
+    url: "https://www.linkedin.com/in/johndkirwan"
+    icon: "brands/linkedin"
+    include_in_pdf: true
+  - label: "ResearchGate"
+    network: "researchgate"
+    username: "John-Kirwan-6"
+    url: "https://www.researchgate.net/profile/John-Kirwan-6"
+    icon: "academicons/researchgate"
+    include_in_pdf: false
+  - label: "Google Scholar"
+    network: "google-scholar"
+    username: "b2UN4cEAAAAJ"
+    url: "https://scholar.google.com/citations?user=b2UN4cEAAAAJ"
+    icon: "academicons/google-scholar"
+    include_in_pdf: false
+  - label: "ORCID"
+    network: "orcid"
+    username: "0000-0001-5537-3574"
+    url: "https://orcid.org/0000-0001-5537-3574"
+    icon: "academicons/orcid"
+    include_in_pdf: true
+
+experience:
+  - position: "Bioinformatics Researcher"
+    organization:
+      name: "Arquimea Research Centre"
+      url: "https://www.arquimea.com/research-development-innovation/research-center/"
+    location: "La Laguna, Spain"
+    date_start: "2022-07-04"
+    date_end: null
+    summary: "My current role focuses on pharmaceutical bioinformatics."
+    highlights:
+      - "Structural biology, using AlphaFold and related tools"
+      - "Proteomics and other -omics approaches"
+      - "Deep learning modeling, including Pytorch and Tensorflow"
+      - "Biostatistics and probabilistic modelling, using PyMC and Stan"
+  - position: "Post-doctoral Researcher"
+    organization:
+      name: "Stazione Zoologica Anton Dohrn"
+      url: "http://www.szn.it"
+    location: "Naples, Italy"
+    date_start: "2019-10-01"
+    date_end: "2022-06-22"
+    summary: "Researched the photic behaviour of sea urchins as part of an international HFSP collaboration."
+    highlights:
+      - "Designed and carried out behavioural experiments"
+      - "Performed statistical analysis"
+  - position: "Project Manager - Vision Research"
+    organization:
+      name: "Lund University"
+      url: "http://www.lu.se"
+    location: "Lund, Sweden"
+    date_start: "2019-06-01"
+    date_end: "2019-08-31"
+    summary: "Carried out vision science behavioural experiments and analysis using R, Matlab and Python."
+    highlights:
+      - "Co-advised an MSc student"
+  - position: "Doctoral Researcher"
+    organization:
+      name: "Lund University"
+      url: "http://www.lu.se"
+    location: "Lund, Sweden"
+    date_start: "2013-05-15"
+    date_end: "2018-06-07"
+    summary: "Wrote my PhD thesis 'Spatial Vision in Diverse Invertebrates' at the Lund Vision Group, Sweden."
+    highlights:
+      - "Combined optics, behaviour, and Bayesian statistics"
+      - "Developed methods to measure spatial resolution in simple visual systems"
+  - position: "Expedition Assistant Leader"
+    organization:
+      name: "Lowest to Highest for Cancer Expedition"
+    location: "Everest Basecamp"
+    date_start: "2013-04-16"
+    date_end: "2013-05-10"
+    summary: "Assistant leader for an expedition to Everest Basecamp."
+    highlights: []
+
+education:
+  - degree: "PhD"
+    area: "Sensory Biology"
+    institution: "Lund University"
+    location: "Sweden"
+    date_start: "2013-05-01"
+    date_end: "2018-05-07"
+    summary: "Thesis 'Spatial Vision in Diverse Invertebrates'."
+    thesis_title: "Spatial Vision in Diverse Invertebrates"
+    thesis_url: "https://lucris.lub.lu.se/ws/portalfiles/portal/43103387/John_Kirwan_WEBB.PDF"
+    thesis_button_text: "Read Thesis Introduction"
+  - degree: "MSc"
+    area: "Molecular Evolution"
+    institution: "University College Dublin"
+    location: "Ireland"
+    date_start: "2008-12-09"
+    date_end: "2010-06-01"
+    summary: "Thesis: 'The Molecular Evolution of Hearing in Mammals'"
+    thesis_title: "The Molecular Evolution of Hearing in Mammals"
+  - degree: "BSc (Hons)"
+    area: "Zoology"
+    institution: "University College Dublin"
+    location: "Ireland"
+    date_start: "2004-09-12"
+    date_end: "2008-05-31"
+    summary: "GPA: 4.02/4.2"
+
+skill_groups:
+  - name: "Technical Skills"
+    include_in_pdf: true
+    items:
+      - name: "Python"
+        description: ""
+        percent: 80
+        icon: "code-bracket"
+      - name: "Data Science"
+        description: ""
+        percent: 100
+        icon: "chart-bar"
+      - name: "R"
+        description: ""
+        percent: 40
+        icon: "circle-stack"
+  - name: "Hobbies"
+    include_in_pdf: false
+    color: "#eeac02"
+    color_border: "#f0bf23"
+    items:
+      - name: "Hiking"
+        description: ""
+        percent: 60
+        icon: "person-simple-walk"
+      - name: "Reading"
+        description: ""
+        percent: 100
+        icon: "cat"
+      - name: "Photography"
+        description: ""
+        percent: 80
+        icon: "camera"
+
+languages:
+  - name: "English"
+    level: "Native"
+    percent: 100
+  - name: "Swedish"
+    level: "B2"
+    percent: 50
+  - name: "Spanish"
+    level: "B2"
+    percent: 50
+
+awards:
+  - title: "Customising your models with TensorFlow 2"
+    awarder: "Coursera / Imperial College London"
+    icon: "coursera"
+    url: "https://www.coursera.org/learn/customising-models-tensorflow2"
+    certificate_url: "https://www.coursera.org/account/accomplishments/verify/Y334QC7PYYL6"
+    date: "2025-08-14"
+  - title: "Valohai MLOps Fundamentals Certification"
+    awarder: "Valohai"
+    icon: "simpleicons/valohai"
+    url: "https://learn.valohai.academy/collections/efa3043e-5a9f-11ed-8850-06c0361096e5"
+    certificate_url: "https://learn.valohai.academy/certificate/NCXTeIcmIw"
+    date: "2025-08-12"
+  - title: "Applied Software Engineering Fundamentals Specialization"
+    awarder: "Coursera / IBM"
+    icon: "coursera"
+    url: "https://www.coursera.org/specializations/software-engineering-fundamentals"
+    certificate_url: "https://coursera.org/share/d217c2ee9082940b903d22e46d3e8062"
+    date: "2023-03-10"
+    summary: "Covers Git, GitHub, Linux, and Python, and learn the fundamentals of Software Engineering."
+  - title: "Pharmaceutical Bioinformatics & Applied Pharmaceutical Bioinformatics"
+    awarder: "Uppsala University"
+    url: "http://www.pharmbio.org"
+    date: "2020-05-31"
+    summary: "Pass with Distinction"
+  - title: "Mountain Leader Award"
+    awarder: "Mountain Leader Training Scotland"
+    url: "https://www.mountain-training.org/qualifications/walking/mountain-leader"
+    certificate_url: "https://mt.tahdah.me/profile/index/95316"
+    date: "2011-10-01"
+    summary: "Professional certification to lead hillwalking groups."
+
+pdf:
+  output: "static/uploads/resume.pdf"
+  skill_group_names:
+    - "Technical Skills"
+  include_awards: true
+
+bio:
+  - |
+    I'm a computational biologist working at the interface of data science and biology,
+    applying statistical and machine learning approaches to uncover structure in complex
+    biological data. I am a senior scientist at Arquimea Research Centre, La Laguna, Spain.
+  - |
+    My background spans experimental biology, computational modeling, and bioinformatics.
+    After completing a PhD at Lund University focused on visual systems in invertebrates, I
+    transitioned toward data-driven biology, developing analytical tools and predictive
+    models that bridge biological insight and computation.
+  - |
+    I enjoy learning new analytical methods, writing code, and communicating science clearly.
+    My goal is to continue growing as a biological data scientist, expanding across diverse
+    fields within the life sciences while keeping biological meaning at the core of the analysis.

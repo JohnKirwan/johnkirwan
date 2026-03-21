@@ -6,6 +6,7 @@ hugo_stats.json
 
 # Node
 node_modules/
+build/
 
 # Hugo tooling artifacts
 package.hugo.json
