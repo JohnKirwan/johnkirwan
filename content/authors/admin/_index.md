@@ -23,9 +23,9 @@ highlight_name: true
 role: Bioinformatics Scientist
 
 # Organizations/Affiliations to display in Biography blox
-organizations:
-  - name: Arquimea Research Centre
-    url: https://www.arquimea.com/
+# organizations:
+#   - name: Arquimea Research Centre
+#     url: https://www.arquimea.com/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -83,9 +83,9 @@ work:
     company_url: 'https://www.arquimea.com/research-development-innovation/research-center/'
     company_logo: ''
     date_start: 2022-07-04
-    date_end: ''
+    date_end: '2026-03-11'
     summary: |
-      My current role focuses on pharmaceutical bioinformatics.
+      Focused on pharmaceutical bioinformatics.
       - Structural biology, using AlphaFold and related tools
       - Proteomics and other -omics approaches
       - Deep learning modeling, including Pytorch and Tensorflow
