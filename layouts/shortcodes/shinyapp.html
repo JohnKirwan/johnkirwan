@@ -1,0 +1,32 @@
+{{/*
+  shinyapp — embed a static / client-side (e.g. shinylive) web app in a
+  responsive, lazy-loaded iframe, with a fallback link if it fails to load.
+
+  Params:
+    src    (required) — the app URL.
+    height (optional) — iframe height (any CSS length). Default "800px".
+    title  (optional) — accessible iframe title. Default "Embedded app".
+
+  Usage:
+    {{< shinyapp src="https://johnkirwan.github.io/radiatR/app/" height="850px" title="radiatR Shiny app" >}}
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- if not $src -}}
+  {{- errorf "shinyapp shortcode requires a 'src' parameter (%s)" .Position -}}
+{{- end -}}
+{{- $height := .Get "height" | default "800px" -}}
+{{- $title := .Get "title" | default "Embedded app" -}}
+<div class="shinyapp-embed" style="width:100%; margin:1.5rem 0;">
+  <iframe
+    src="{{ $src }}"
+    title="{{ $title }}"
+    loading="lazy"
+    allow="fullscreen; clipboard-write"
+    referrerpolicy="no-referrer-when-downgrade"
+    style="width:100%; height:{{ $height }}; border:1px solid #ddd; border-radius:8px;">
+  </iframe>
+  <p style="margin-top:.5rem; font-size:.9rem;">
+    If the app doesn’t load,
+    <a href="{{ $src }}" target="_blank" rel="noopener">open it in a new tab</a>.
+  </p>
+</div>
