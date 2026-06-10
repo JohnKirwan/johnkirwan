@@ -5,16 +5,24 @@ basics:
   first_name: "John D."
   last_name: "Kirwan"
   suffix: "PhD"
-  headline: "Computational Biologist and Senior Scientist"
+  headline: "Bioinformatics Scientist & Computational Biologist"
   role: "Bioinformatics Scientist"
   email: "john@jkirwan.org"
   phone: "+34 639981732"
   website: "https://jkirwan.org"
-  location: "La Laguna, Spain"
+  location: "San Cristóbal de la Laguna, Spain"
   summary: |
-    Computational biologist working at the interface of data science and biology,
-    applying statistical and machine learning approaches to uncover structure in
-    complex biological data.
+    Computational biologist and data scientist with a track record of applying machine
+    learning and statistical modelling to complex biological problems — from biomolecular
+    structure prediction and de novo peptide design to metagenomic analysis and preclinical
+    trial design. My background combines rigorous quantitative training (Bayesian modelling,
+    deep learning, MLOps) with hands-on experience across the full data pipeline — from
+    experimental design through to deployment and reproducible reporting. I have worked at
+    the interface of Biotech and AI in an industry research setting, contributing to work
+    that reached commercial spinout stage and to a NeurIPS 2025 publication on uncertainty
+    quantification in deep regression. I am now looking to bring this skillset to health
+    informatics and clinical data science, where the same analytical rigour can drive
+    decisions with direct patient impact.
 
 photo:
   path: "content/authors/admin/avatar.jpg"
@@ -31,8 +39,11 @@ site:
     - name: "Arquimea Research Centre"
       url: "https://www.arquimea.com/"
   interests:
-    - "Data Science"
-    - "Computational Biology"
+    - "Bioinformatics"
+    - "Statistical Modelling"
+    - "Deep Learning"
+    - "MLOps"
+    - "Clinical Data Science"
 
 profiles:
   - label: "GitHub"
@@ -67,40 +78,47 @@ profiles:
     include_in_pdf: true
 
 experience:
-  - position: "Bioinformatics Researcher"
+  - position: "Bioinformatics Scientist"
     organization:
       name: "Arquimea Research Centre"
       url: "https://www.arquimea.com/research-development-innovation/research-center/"
     location: "La Laguna, Spain"
     date_start: "2022-07-04"
-    date_end: null
-    summary: "My current role focuses on pharmaceutical bioinformatics."
+    date_end: "2026-03-31"
+    summary: |
+      Bridged Biotech and AI departments to develop machine learning workflows for drug
+      design, contributing to research that progressed to a commercial spinout. Contributing
+      author on a NeurIPS 2025 publication on uncertainty quantification in deep regression.
     highlights:
-      - "Structural biology, using AlphaFold and related tools"
-      - "Proteomics and other -omics approaches"
-      - "Deep learning modeling, including Pytorch and Tensorflow"
-      - "Biostatistics and probabilistic modelling, using PyMC and Stan"
-  - position: "Post-doctoral Researcher"
+      - "Developed pipelines for synthetic data generation, protein and biomolecular structure prediction, and de novo design of oligopeptides and small molecules"
+      - "Worked with metagenomic data, preclinical power testing, and data visualisation"
+      - "Built and tracked ML experiments using Python, PyTorch and Valohai; managed containerised workflows with Docker in a Git-versioned codebase"
+      - "Delivered work within an Agile/Scrum team using Azure DevOps for CI/CD; additional cloud experience with AWS"
+  - position: "Postdoctoral Researcher"
     organization:
       name: "Stazione Zoologica Anton Dohrn"
       url: "http://www.szn.it"
     location: "Naples, Italy"
     date_start: "2019-10-01"
-    date_end: "2022-06-22"
-    summary: "Researched the photic behaviour of sea urchins as part of an international HFSP collaboration."
+    date_end: "2022-07-22"
+    summary: |
+      Quantitative research in sensory biology, with emphasis on statistical modelling
+      and signal processing of behavioural data.
     highlights:
-      - "Designed and carried out behavioural experiments"
-      - "Performed statistical analysis"
-  - position: "Project Manager - Vision Research"
+      - "Analysed experimental data using Bayesian multilevel regression models in R and Stan"
+      - "Designed and executed behavioural experiments with automated data acquisition pipelines"
+      - "Contributed to interdisciplinary publications spanning biology, optics, and computation"
+  - position: "Project Manager (contract)"
     organization:
       name: "Lund University"
       url: "http://www.lu.se"
     location: "Lund, Sweden"
     date_start: "2019-06-01"
     date_end: "2019-08-31"
-    summary: "Carried out vision science behavioural experiments and analysis using R, Matlab and Python."
-    highlights:
-      - "Co-advised an MSc student"
+    summary: |
+      Short-term research management contract supervising experimental data collection
+      and a masters student, bridging doctoral and postdoctoral positions.
+    highlights: []
   - position: "Doctoral Researcher"
     organization:
       name: "Lund University"
@@ -108,18 +126,13 @@ experience:
     location: "Lund, Sweden"
     date_start: "2013-05-15"
     date_end: "2018-06-07"
-    summary: "Wrote my PhD thesis 'Spatial Vision in Diverse Invertebrates' at the Lund Vision Group, Sweden."
+    summary: |
+      Computational and statistical analysis of visual systems in invertebrates,
+      combining experimental biology with quantitative modelling.
     highlights:
-      - "Combined optics, behaviour, and Bayesian statistics"
-      - "Developed methods to measure spatial resolution in simple visual systems"
-  - position: "Expedition Assistant Leader"
-    organization:
-      name: "Lowest to Highest for Cancer Expedition"
-    location: "Everest Basecamp"
-    date_start: "2013-04-16"
-    date_end: "2013-05-10"
-    summary: "Assistant leader for an expedition to Everest Basecamp."
-    highlights: []
+      - "Built statistical models using Bayesian multilevel regression in R and Stan; additional analysis in Python and Matlab"
+      - "Developed optical and geometric models to estimate spatial resolution theoretically"
+      - "Designed novel experimental protocols for quantifying animal visual performance"
 
 education:
   - degree: "PhD"
@@ -128,7 +141,7 @@ education:
     location: "Sweden"
     date_start: "2013-05-01"
     date_end: "2018-05-07"
-    summary: "Thesis 'Spatial Vision in Diverse Invertebrates'."
+    summary: "Thesis: 'Spatial Vision in Diverse Invertebrates'."
     thesis_title: "Spatial Vision in Diverse Invertebrates"
     thesis_url: "https://lucris.lub.lu.se/ws/portalfiles/portal/43103387/John_Kirwan_WEBB.PDF"
     thesis_button_text: "Read Thesis Introduction"
@@ -154,16 +167,68 @@ skill_groups:
     items:
       - name: "Python"
         description: ""
-        percent: 80
+        percent: 90
         icon: "code-bracket"
-      - name: "Data Science"
-        description: ""
-        percent: 100
-        icon: "chart-bar"
       - name: "R"
         description: ""
-        percent: 40
-        icon: "circle-stack"
+        percent: 70
+        icon: "code-bracket"
+      - name: "PyTorch"
+        description: ""
+        percent: 75
+        icon: "code-bracket"
+      - name: "TensorFlow"
+        description: ""
+        percent: 65
+        icon: "code-bracket"
+      - name: "Machine Learning"
+        description: ""
+        percent: 85
+        icon: "chart-bar"
+      - name: "Deep Learning"
+        description: ""
+        percent: 80
+        icon: "chart-bar"
+      - name: "Statistical Modelling"
+        description: ""
+        percent: 85
+        icon: "chart-bar"
+      - name: "Bayesian Statistics"
+        description: ""
+        percent: 80
+        icon: "chart-bar"
+      - name: "Protein Structure Prediction"
+        description: ""
+        percent: 75
+        icon: "chart-bar"
+      - name: "Structural Bioinformatics"
+        description: ""
+        percent: 75
+        icon: "chart-bar"
+      - name: "Docker"
+        description: ""
+        percent: 70
+        icon: "code-bracket"
+      - name: "Git"
+        description: ""
+        percent: 80
+        icon: "code-bracket"
+      - name: "Azure DevOps"
+        description: ""
+        percent: 70
+        icon: "code-bracket"
+      - name: "AWS"
+        description: ""
+        percent: 55
+        icon: "code-bracket"
+      - name: "Valohai"
+        description: ""
+        percent: 70
+        icon: "code-bracket"
+      - name: "Matlab"
+        description: ""
+        percent: 60
+        icon: "code-bracket"
   - name: "Hobbies"
     include_in_pdf: false
     color: "#eeac02"
@@ -186,10 +251,10 @@ languages:
   - name: "English"
     level: "Native"
     percent: 100
-  - name: "Swedish"
+  - name: "Spanish"
     level: "B2"
     percent: 50
-  - name: "Spanish"
+  - name: "Swedish"
     level: "B2"
     percent: 50
 
@@ -233,15 +298,16 @@ pdf:
 
 bio:
   - |
-    I'm a computational biologist working at the interface of data science and biology,
-    applying statistical and machine learning approaches to uncover structure in complex
-    biological data. 
+    Computational biologist and data scientist with a track record of applying machine
+    learning and statistical modelling to complex biological problems — from biomolecular
+    structure prediction and de novo peptide design to metagenomic analysis and preclinical
+    trial design.
   - |
-    My background spans experimental biology, computational modeling, and bioinformatics.
-    After completing a PhD at Lund University focused on visual systems in invertebrates, I
-    transitioned toward data-driven biology, developing analytical tools and predictive
-    models that bridge biological insight and computation.
+    My background combines rigorous quantitative training (Bayesian modelling, deep learning,
+    MLOps) with hands-on experience across the full data pipeline — from experimental design
+    through to deployment and reproducible reporting. I have worked at the interface of Biotech
+    and AI in an industry research setting, contributing to work that reached commercial spinout
+    stage and to a NeurIPS 2025 publication on uncertainty quantification in deep regression.
   - |
-    I enjoy learning new analytical methods, writing code, and communicating science clearly.
-    My goal is to continue growing as a biological data scientist, expanding across diverse
-    fields within the life sciences while keeping biological meaning at the core of the analysis.
+    I am now looking to bring this skillset to health informatics and clinical data science,
+    where the same analytical rigour can drive decisions with direct patient impact.
