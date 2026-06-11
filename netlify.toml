@@ -9,7 +9,9 @@
 [build.environment]
   HUGO_VERSION = "0.163.0"
   HUGO_BUILD_TAGS = "extended"
-  NODE_VERSION = "20"
+  # Hugo >=0.163 runs Tailwind via `node --permission`; that flag only exists
+  # in Node >=22.13 (Node 20 errors "bad option: --permission"). Pin Node 22.
+  NODE_VERSION = "22"
   HUGO_ENABLEGITINFO = "true"
 
 [context.production.environment]
