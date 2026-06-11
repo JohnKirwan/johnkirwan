@@ -1,5 +1,9 @@
+# `npm ci` forces a clean node_modules every build. Without it, Netlify skips
+# the install when package-lock is unchanged and reuses a cached node_modules
+# whose .bin/tailwindcss is stale; Hugo >=0.163 rejects it at the deferred CSS
+# step ("tailwindcss is not a Node.js script"). A clean install fixes the bin.
 [build]
-  command = "hugo --gc --minify -b $URL && npx pagefind --source 'public'"
+  command = "npm ci && hugo --gc --minify -b $URL && npx pagefind --source 'public'"
   publish = "public"
 
 [build.environment]
@@ -12,10 +16,10 @@
   HUGO_ENV = "production"
 
 [context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL && npx pagefind --source 'public'"
+  command = "npm ci && hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL && npx pagefind --source 'public'"
 
 [context.branch-deploy]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL && npx pagefind --source 'public'"
+  command = "npm ci && hugo --gc --minify -b $DEPLOY_PRIME_URL && npx pagefind --source 'public'"
 
 [[plugins]]
   package = "netlify-plugin-hugo-cache-resources"
