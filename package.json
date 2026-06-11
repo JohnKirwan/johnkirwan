@@ -12,6 +12,7 @@
   },
   "name": "johnkirwan",
   "scripts": {
+    "preinstall": "node -e \"if(!(process.env.npm_config_user_agent||'').startsWith('npm/')){console.error('This project uses npm. Run: npm install (not pnpm/yarn) - Hugo 0.163 needs npm-style Tailwind bins.');process.exit(1)}\"",
     "dev": "hugo server -D",
     "resume:build": "node scripts/build-resume.mjs",
     "resume:pdf": "node scripts/build-resume.mjs --pdf"
