@@ -20,7 +20,7 @@ During my PhD and subsequently, I co-supervised four Bachelor projects and inter
 
 In 2019-2020, I co-supervised a MSc student project based at Lund University, concerning the visual system of chitons. I trained the student in culturing animals, and preparing, running and analysing behavioural experiments, as well as coding in MatLab and R, during summer 2019. I continued to provide guidance until the successful completion of the project in October 2020, especially regarding statistical analysis and interpretation.
 
-In my current role in 2021, I assisted a PhD student with experimental design and statistical analysis for a project concerning the effect of light and other factors on larval morphology.
+In my postdoc at Stazione Zoologica AntonDOhrn in 2021, I assisted a PhD student with experimental design and statistical analysis for a project concerning the effect of light and other factors on larval morphology.
 
 ## Laboratory Teaching Aid Roles
 
