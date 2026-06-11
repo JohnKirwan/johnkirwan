@@ -11,3 +11,8 @@ build/
 # Hugo tooling artifacts
 package.hugo.json
 assets/jsconfig.json
+
+# Quarto / R Markdown render artifacts (never commit rendered output into content)
+**/*_files/
+**/.quarto/
+**/*.rmarkdown
