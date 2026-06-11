@@ -16,6 +16,10 @@ main:
     identifier: ktytrxFc
     url: /uploads/resume.pdf
     weight: 30
+  - name: Software
+    identifier: Sw7Kq2Lm
+    url: software/
+    weight: 35
   - name: Papers
     identifier: G3rTV2to
     url: /#papers
