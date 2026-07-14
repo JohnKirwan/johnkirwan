@@ -15,9 +15,9 @@
 </div>
 <div style="min-width:0;max-width:700px;line-height:1.5;overflow-wrap:anywhere;word-break:normal;">
 <h1 style="font-size:28px;line-height:1.2;margin:0 0 6px;font-weight:700;">Dr. John D. Kirwan</h1>
-<div style="color:#555;margin:0 0 18px;font-weight:600;">Computational Biologist · Bioinformatics &amp; Machine Learning</div>
+<div style="color:#555;margin:0 0 18px;font-weight:600;">Computational Biologist · Bioinformatics &amp; Machine Learning · Biostatistics</div>
 <hr style="border:0;border-top:1px solid #e5e5e5;margin:12px 0 14px;">
-<div>Computational biologist and data scientist pairing rigorous statistical modelling — Bayesian inference and deep learning — with hands-on ML engineering and reproducible pipelines. Nearly four years at the interface of biotech and AI in an industry research setting, spanning biomolecular structure prediction, generative molecular design, and metagenomic analysis, and including a contribution to a NeurIPS 2025 publication on uncertainty quantification. Now focusing on structure-informed metagenomics, functional annotation, and antimicrobial-resistance research — applying structural and evolutionary insight to large-scale biological data.</div>
+<div>Computational biologist and data scientist pairing rigorous statistical modelling — Bayesian inference and deep learning — with hands-on ML engineering and reproducible pipelines. Nearly four years at the interface of biotech and AI in an industry research setting, spanning biomolecular structure prediction, generative molecular design, and metagenomic analysis, and including a contribution to a NeurIPS 2025 publication on uncertainty quantification.</div>
 <h2 style="margin:22px 0 10px;font-size:12px;letter-spacing:.12em;color:#555;text-transform:uppercase;">Experience</h2>
 <h3 style="margin:14px 0 6px;font-size:14px;font-weight:700;">Bioinformatics Scientist — <em>Arquimea Research Centre, La Laguna, Spain</em> (Jul 2022-Mar 2026)</h3><p style="margin:0 0 8px;">Worked at the interface of the AI and biotech teams on structure-based drug discovery,
 generative molecular design, and applied machine learning — the link between the

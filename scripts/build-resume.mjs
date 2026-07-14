@@ -164,6 +164,7 @@ function loadPublications(author) {
     })
     .filter(({ data }) => data && typeof data === "object")
     .filter(({ data }) => data.draft !== true)
+    .filter(({ data }) => data.featured === true)
     .filter(({ data }) => Array.isArray(data.authors) && data.authors.some((name) => authorNames.has(String(name).trim())))
     .map(({ filePath, data }) => ({
       title: requireNonEmptyString(data.title, `publication title in ${relativize(filePath)}`),
@@ -328,7 +329,7 @@ function renderTypst(resume) {
   const lines = [
     '#set page(paper: "a4", margin: (x: 13mm, y: 11mm))',
     '#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 9pt)',
-    "#set par(leading: 0.8em)",
+    "#set par(leading: 0.95em)", 
     "#set list(marker: [•])",
     "",
     "#let muted(body) = text(fill: rgb(\"5b5b5b\"))[#body]",
@@ -426,7 +427,7 @@ function renderTypst(resume) {
   }
 
   if (resume.publications.length) {
-    lines.push(...typstSection("Publications", 6));
+    lines.push(...typstSection("Selected Publications", 6));
     for (const publication of resume.publications) {
       lines.push(...renderTypstPublication(publication), "");
     }
@@ -584,7 +585,7 @@ function renderTypstParagraphs(value) {
     lines.push(typstEscape(paragraph));
     if (index < paragraphs.length - 1) {
       lines.push("");
-      lines.push("#v(4pt)");
+      lines.push("#v(6pt)");
       lines.push("");
     }
   });

@@ -9,17 +9,14 @@ is_owner: true
 status: {}
 
 role: Bioinformatics Scientist
-headline: Computational Biologist · Bioinformatics & Machine Learning
+headline: Computational Biologist · Bioinformatics & Machine Learning · Biostatistics
 summary: >-
   Computational biologist and data scientist pairing rigorous statistical modelling
   — Bayesian inference and deep learning — with hands-on ML engineering and
   reproducible pipelines. Nearly four years at the interface of biotech and AI
   in an industry research setting, spanning biomolecular structure prediction,
   generative molecular design, and metagenomic analysis, and including a
-  contribution to a NeurIPS 2025 publication on uncertainty quantification. Now
-  focusing on structure-informed metagenomics, functional annotation, and
-  antimicrobial-resistance research — applying structural and evolutionary
-  insight to large-scale biological data.
+  contribution to a NeurIPS 2025 publication on uncertainty quantification.
 
 contact:
   email: john@jkirwan.org
@@ -36,12 +33,12 @@ photo:
   include_in_pdf: true
 
 # organizations:
-#   - name: Arquimea Research Centre
-#     url: https://www.arquimea.com/
+#   - name: 
+#     url: 
 
 # affiliations:
-#   - name: Arquimea Research Centre
-#     url: https://www.arquimea.com/
+#   - name: 
+#     url: 
 
 links:
   - icon: brands/github
