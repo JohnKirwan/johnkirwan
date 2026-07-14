@@ -9,19 +9,19 @@ const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep
 const repoRoot = process.cwd();
 const sourcePath = path.join(repoRoot, "data/authors/admin.yaml");
 const publicationsRoot = path.join(repoRoot, "content/publication");
-const generatedMarkdownPath = path.join(repoRoot, "resume.md");
 const buildDir = path.join(repoRoot, "build");
+const buildIconsDir = path.join(buildDir, "resume-icons");
 const typstPath = path.join(buildDir, "resume.typ");
 const compilePdfFlag = process.argv.includes("--pdf");
 
 const resume = loadResume(sourcePath);
 
 fs.mkdirSync(buildDir, { recursive: true });
-fs.writeFileSync(generatedMarkdownPath, renderResumeMarkdown(resume), "utf8");
+fs.mkdirSync(buildIconsDir, { recursive: true });
+materializeProfileIcons(resume.profiles, buildIconsDir);
 fs.writeFileSync(typstPath, renderTypst(resume), "utf8");
 
 const generated = [
-  relativize(generatedMarkdownPath),
   relativize(typstPath),
 ];
 
@@ -194,110 +194,6 @@ function findPublicationFiles(rootDir) {
   return files;
 }
 
-function renderResumeMarkdown(resume) {
-  const sidebarProfiles = resume.profiles.filter((profile) => profile.include_in_pdf);
-  const sidebarSkillGroups = resume.skill_groups.filter((group) => group.include_in_pdf);
-  const photoHtml = resume.photo?.include_in_markdown && resume.photo.path
-    ? `<img src="${slash(resume.photo.path)}" alt="${escapeHtml(resume.photo.alt || resume.basics.display_name)}" width="${resume.photo.width_px || 160}" style="display:block;margin:0 auto 12px;border-radius:10px;" />`
-    : "";
-  const contactRows = [
-    ["Location", resume.basics.location],
-    ["Phone", resume.basics.phone],
-    ["Email", resume.basics.email],
-    ["Website", displayUrl(resume.basics.website)],
-    ...sidebarProfiles.map((profile) => [profile.label, profile.username || displayUrl(profile.url)]),
-  ]
-    .filter(([, value]) => value)
-    .map(([label, value]) => `<div style="margin:0 0 8px;"><strong>${escapeHtml(label)}</strong><br>${escapeHtml(value)}</div>`)
-    .join("\n");
-  const skillBlocks = sidebarSkillGroups
-    .map((group) => {
-      const chips = (group.items || [])
-        .map(
-          (item) =>
-            `<span style="display:inline-block;padding:4px 8px;border-radius:999px;background:#e9e9e9;margin:3px 6px 3px 0;font-size:13px;">${escapeHtml(item.name)}</span>`,
-        )
-        .join("");
-      return `<h2 style="margin:18px 0 8px;font-size:12px;letter-spacing:.12em;color:#555;text-transform:uppercase;">${escapeHtml(group.name)}</h2><div>${chips}</div>`;
-    })
-    .join("\n");
-  const languageChips = resume.languages
-    .map((language) => {
-      const label = `${language.name}${language.level ? ` (${language.level})` : ""}`;
-      return `<span style="display:inline-block;padding:4px 8px;border-radius:999px;background:#e9e9e9;margin:3px 6px 3px 0;font-size:13px;">${escapeHtml(label)}</span>`;
-    })
-    .join("");
-  const experienceHtml = resume.experience
-    .map((item) => renderResumeEntryHtml(item.position, [item.organization?.name, item.location].filter(Boolean).join(", "), formatDateRange(item.date_start, item.date_end), item.summary, item.highlights))
-    .join("\n");
-  const educationHtml = resume.education
-    .map((item) => renderResumeEntryHtml([item.degree, item.area].filter(Boolean).join(" "), [item.institution, item.location].filter(Boolean).join(", "), formatDateRange(item.date_start, item.date_end), "", item.summary ? [item.summary] : []))
-    .join("\n");
-  const awardsHtml = resume.pdf.include_awards && resume.awards.length
-    ? [
-        '<hr style="border:0;border-top:1px solid #e5e5e5;margin:12px 0 14px;">',
-        '<h2 style="margin:22px 0 10px;font-size:12px;letter-spacing:.12em;color:#555;text-transform:uppercase;">Awards</h2>',
-        '<ul style="list-style:none;margin:6px 0 10px 0;padding-left:0;">',
-        ...resume.awards.map(
-          (award) =>
-            `<li style="margin:0 0 6px;">&bull; ${escapeHtml(`${award.title} — ${award.awarder} (${formatDate(award.date)})`)}</li>`,
-        ),
-        "</ul>",
-      ].join("")
-    : "";
-  const bioHtml = resume.bio.length
-    ? [
-        '<hr style="border:0;border-top:1px solid #e5e5e5;margin:12px 0 14px;">',
-        '<h2 style="margin:22px 0 10px;font-size:12px;letter-spacing:.12em;color:#555;text-transform:uppercase;">Bio</h2>',
-        ...resume.bio.map((paragraph) => `<p style="margin:0 0 10px;">${escapeHtml(paragraph.trim())}</p>`),
-      ].join("")
-    : "";
-
-  const parts = [
-    "<!-- Generated from data/authors/admin.yaml by `npm run resume:build`. -->",
-    `<div style="display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:start;padding:16px 20px;font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;color:#111;">`,
-    `<div style="background:#f7f7f7;border-radius:8px;padding:12px;">`,
-    photoHtml,
-    contactRows,
-    skillBlocks,
-    `<h2 style="margin:18px 0 8px;font-size:12px;letter-spacing:.12em;color:#555;text-transform:uppercase;">Languages</h2>`,
-    `<div>${languageChips}</div>`,
-    `</div>`,
-    `<div style="min-width:0;max-width:700px;line-height:1.5;overflow-wrap:anywhere;word-break:normal;">`,
-    `<h1 style="font-size:28px;line-height:1.2;margin:0 0 6px;font-weight:700;">${escapeHtml(resume.basics.display_name)}</h1>`,
-    `<div style="color:#555;margin:0 0 18px;font-weight:600;">${escapeHtml(resume.basics.headline || resume.basics.role)}</div>`,
-    `<hr style="border:0;border-top:1px solid #e5e5e5;margin:12px 0 14px;">`,
-    `<div>${escapeHtml(resume.basics.summary.trim())}</div>`,
-    `<h2 style="margin:22px 0 10px;font-size:12px;letter-spacing:.12em;color:#555;text-transform:uppercase;">Experience</h2>`,
-    experienceHtml,
-    `<hr style="border:0;border-top:1px solid #e5e5e5;margin:12px 0 14px;">`,
-    `<h2 style="margin:22px 0 10px;font-size:12px;letter-spacing:.12em;color:#555;text-transform:uppercase;">Education</h2>`,
-    educationHtml,
-    awardsHtml,
-    bioHtml,
-    `</div>`,
-    `</div>`,
-  ];
-
-  return `${parts.filter(Boolean).join("\n")}\n`;
-}
-
-function renderResumeEntryHtml(title, organization, dateRange, summary, bullets) {
-  const summaryHtml = summary?.trim() ? `<p style="margin:0 0 8px;">${escapeHtml(summary.trim())}</p>` : "";
-  const bulletsHtml = bullets?.length
-    ? `<ul style="list-style:none;margin:6px 0 10px 0;padding-left:0;">${bullets
-        .map((bullet) => `<li style="margin:0 0 4px;">&bull; ${escapeHtml(bullet)}</li>`)
-        .join("")}</ul>`
-    : "";
-  return [
-    `<h3 style="margin:14px 0 6px;font-size:14px;font-weight:700;">${escapeHtml(title)} — <em>${escapeHtml(organization)}</em> (${escapeHtml(dateRange)})</h3>`,
-    summaryHtml,
-    bulletsHtml,
-  ]
-    .filter(Boolean)
-    .join("");
-}
-
 function renderTypst(resume) {
   const photoPath = slash(path.posix.relative("build", slash(resume.photo.path)));
   const pdfSkillGroups = selectPdfSkillGroups(resume);
@@ -316,9 +212,9 @@ function renderTypst(resume) {
   );
   const remainingEducation = resume.education.filter((item) => !pageOneEducation.includes(item));
   const featuredSkills = selectSkillsForPageOne(pdfSkillGroups, resume.pdf.page_one.featured_skill_names);
-  const profileText = resume.profiles
+  const profileLines = resume.profiles
     .filter((profile) => profile.include_in_pdf)
-    .map((profile) => `${profile.label}: ${profile.username || displayUrl(profile.url)}`);
+    .map((profile) => renderTypstProfile(profile));
   const contactText = [
     resume.basics.location,
     resume.basics.email,
@@ -362,8 +258,8 @@ function renderTypst(resume) {
   }
 
   lines.push("", ...typstSection("Profiles", 5).map((line) => `    ${line}`));
-  for (const profile of profileText) {
-    lines.push(`    ${typstEscape(profile)}\\`);
+  for (const profile of profileLines) {
+    lines.push(...profile.map((line) => `    ${line}`));
   }
 
   lines.push("", ...typstSection("Languages", 5).map((line) => `    ${line}`));
@@ -499,6 +395,112 @@ function renderTypstEducation(item) {
   }
 
   return lines;
+}
+
+function renderTypstProfile(profile) {
+  const handle = profile.username || displayUrl(profile.url);
+  if (!handle) {
+    throw new Error(`Missing profile username/url for ${profile.label}`);
+  }
+
+  const iconPath = getMaterializedProfileIconPath(profile.icon);
+  if (!iconPath) {
+    return [`#text(weight: "semibold")[${typstEscape(profile.label)}] #h(4pt) ${typstEscape(handle)}\\`];
+  }
+
+  const relativeIconPath = slash(path.posix.relative("build", iconPath));
+  return [`#image("${typstEscape(relativeIconPath)}", width: 8.5pt) #h(4pt) ${typstEscape(handle)}\\`];
+}
+
+function materializeProfileIcons(profiles, outputDir) {
+  const iconNames = [...new Set(
+    profiles
+      .map((profile) => profile.icon)
+      .filter((icon) => Boolean(getIconLookupConfig(icon))),
+  )];
+
+  for (const iconName of iconNames) {
+    const svg = loadThemeIconSvg(iconName);
+    if (!svg) {
+      continue;
+    }
+    const config = getIconLookupConfig(iconName);
+    fs.writeFileSync(path.join(outputDir, `${config.pack}-${config.name}.svg`), svg, "utf8");
+  }
+}
+
+function getMaterializedProfileIconPath(iconName) {
+  const config = getIconLookupConfig(iconName);
+  if (!config) {
+    return "";
+  }
+  return path.join(buildIconsDir, `${config.pack}-${config.name}.svg`);
+}
+
+function loadThemeIconSvg(iconName) {
+  const config = getIconLookupConfig(iconName);
+  if (!config) {
+    return "";
+  }
+
+  const iconPack = loadIconPack(config.packFile);
+  const icon = iconPack.icons?.[config.name];
+  if (!icon?.body) {
+    throw new Error(`Icon ${iconName} was not found in theme pack ${config.pack}.`);
+  }
+
+  const width = icon.width || iconPack.width || iconPack.height;
+  const height = icon.height || iconPack.height;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" aria-hidden="true">${icon.body}</svg>\n`;
+}
+
+function getIconLookupConfig(iconName) {
+  const aliases = {
+    "brands/google-scholar": "brands/googlescholar",
+  };
+  const canonical = aliases[iconName] || iconName;
+
+  switch (canonical) {
+    case "brands/github":
+      return { pack: "brands", name: "github", packFile: themeIconPackPath("brands") };
+    case "brands/linkedin":
+      return { pack: "brands", name: "linkedin", packFile: themeIconPackPath("brands") };
+    case "academicons/orcid":
+      return { pack: "academicons", name: "orcid", packFile: themeIconPackPath("academicons") };
+    default:
+      return null;
+  }
+}
+
+function themeIconPackPath(pack) {
+  return path.join(resolveThemeIconsDir(), `${pack}.json`);
+}
+
+function resolveThemeIconsDir() {
+  const moduleRoot = path.join(
+    process.env.HOME || "/home/jdk",
+    ".cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/!hugo!blox/kit/modules",
+  );
+  const entries = fs.readdirSync(moduleRoot, { withFileTypes: true });
+  const bloxDirs = entries
+    .filter((entry) => entry.isDirectory() && entry.name.startsWith("blox@"))
+    .map((entry) => entry.name)
+    .sort();
+
+  const latest = bloxDirs.at(-1);
+  if (!latest) {
+    throw new Error(`Could not locate Hugo Blox icon data under ${moduleRoot}`);
+  }
+
+  return path.join(moduleRoot, latest, "data/icons");
+}
+
+function loadIconPack(filePath) {
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`Theme icon pack not found: ${filePath}`);
+  }
+
+  return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
 function selectPdfSkillGroups(resume) {
@@ -754,14 +756,6 @@ function relativize(filePath) {
 
 function slash(value) {
   return value.replace(/\\/g, "/");
-}
-
-function escapeHtml(value) {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/\"/g, "&quot;");
 }
 
 function typstEscape(value) {
