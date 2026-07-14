@@ -2,11 +2,13 @@ import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import yaml from "js-yaml";
+import matter from "gray-matter";
 
 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 const repoRoot = process.cwd();
 const sourcePath = path.join(repoRoot, "data/authors/admin.yaml");
+const publicationsRoot = path.join(repoRoot, "content/publication");
 const generatedMarkdownPath = path.join(repoRoot, "resume.md");
 const buildDir = path.join(repoRoot, "build");
 const typstPath = path.join(buildDir, "resume.typ");
@@ -137,9 +139,58 @@ function loadResume(filePath) {
       ...award,
       date: normalizeDateValue(award.date, `awards.${award.title}.date`),
     })),
+    publications: loadPublications(author),
     bio: splitParagraphs(author.bio || ""),
     pdf: author.resume_pdf,
   };
+}
+
+function loadPublications(author) {
+  if (!fs.existsSync(publicationsRoot)) {
+    return [];
+  }
+
+  const authorNames = new Set(
+    [author.title, author.name?.display, [author.name?.given, author.name?.family].filter(Boolean).join(" ")]
+      .map((value) => String(value || "").trim())
+      .filter(Boolean),
+  );
+
+  return findPublicationFiles(publicationsRoot)
+    .map((filePath) => {
+      const raw = fs.readFileSync(filePath, "utf8");
+      const { data } = matter(raw);
+      return { filePath, data };
+    })
+    .filter(({ data }) => data && typeof data === "object")
+    .filter(({ data }) => data.draft !== true)
+    .filter(({ data }) => Array.isArray(data.authors) && data.authors.some((name) => authorNames.has(String(name).trim())))
+    .map(({ filePath, data }) => ({
+      title: requireNonEmptyString(data.title, `publication title in ${relativize(filePath)}`),
+      authors: data.authors.map((name) => String(name).trim()).filter(Boolean),
+      publication: cleanPublicationVenue(data.publication || ""),
+      date: normalizeDateValue(data.date, `publication date in ${relativize(filePath)}`),
+      url: firstPublicationUrl(data.links),
+    }))
+    .sort((a, b) => b.date.localeCompare(a.date));
+}
+
+function findPublicationFiles(rootDir) {
+  const entries = fs.readdirSync(rootDir, { withFileTypes: true });
+  const files = [];
+
+  for (const entry of entries) {
+    const absolutePath = path.join(rootDir, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...findPublicationFiles(absolutePath));
+      continue;
+    }
+    if (entry.isFile() && entry.name === "index.md") {
+      files.push(absolutePath);
+    }
+  }
+
+  return files;
 }
 
 function renderResumeMarkdown(resume) {
@@ -276,7 +327,7 @@ function renderTypst(resume) {
 
   const lines = [
     '#set page(paper: "a4", margin: (x: 13mm, y: 11mm))',
-    '#set text(font: ("Liberation Sans", "DejaVu Sans", "Arial", "Noto Sans"), size: 9pt)',
+    '#set text(font: ("Liberation Sans", "DejaVu Sans"), size: 9pt)',
     "#set par(leading: 0.8em)",
     "#set list(marker: [•])",
     "",
@@ -324,7 +375,7 @@ function renderTypst(resume) {
     "  ],",
     "  [",
     ...typstSection("Profile", 5).map((line) => `    ${line}`),
-    `    ${typstEscape(resume.basics.summary.trim())}`,
+    ...renderTypstParagraphs(resume.basics.summary.trim()).map((line) => `    ${line}`),
     "",
     ...typstSection("Selected Highlights", 6).map((line) => `    ${line}`),
   );
@@ -374,12 +425,19 @@ function renderTypst(resume) {
     lines.push("");
   }
 
-  if (resume.bio.length) {
-    lines.push(...typstSection("Research Focus", 6));
-    for (const paragraph of resume.bio) {
-      lines.push(typstEscape(paragraph.trim()), "");
+  if (resume.publications.length) {
+    lines.push(...typstSection("Publications", 6));
+    for (const publication of resume.publications) {
+      lines.push(...renderTypstPublication(publication), "");
     }
   }
+
+  // if (resume.bio.length) {
+  //   lines.push(...typstSection("Research Focus", 6));
+  //   for (const paragraph of resume.bio) {
+  //     lines.push(...renderTypstParagraphs(paragraph.trim()), "");
+  //   }
+  // }
 
   return `${lines.join("\n").trim()}\n`;
 }
@@ -393,11 +451,32 @@ function renderTypstExperience(item, maxHighlights) {
   ];
 
   if (item.summary?.trim()) {
-    lines.push(typstEscape(item.summary.trim()));
+    lines.push(...renderTypstParagraphs(item.summary.trim()));
+    lines.push("#v(3pt)");
   }
 
   for (const highlight of (item.highlights || []).slice(0, maxHighlights)) {
     lines.push(`- ${typstEscape(highlight)}`);
+  }
+
+  return lines;
+}
+
+function renderTypstPublication(item) {
+  const authorList = formatPublicationAuthors(item.authors);
+  const venue = [item.publication, formatYear(item.date)].filter(Boolean).join(", ");
+  const lines = [
+    `#text(weight: "semibold")[${typstEscape(item.title)}]`,
+  ];
+
+  if (authorList) {
+    lines.push(typstEscape(authorList));
+  }
+  if (venue) {
+    lines.push(`#emph[${typstEscape(venue)}]`);
+  }
+  if (item.url) {
+    lines.push(`#link("${typstEscape(item.url)}")[${typstEscape(displayUrl(item.url))}]`);
   }
 
   return lines;
@@ -415,6 +494,7 @@ function renderTypstEducation(item) {
     lines.push(item.summary.trim().startsWith("Thesis:")
       ? typstEscape(item.summary.trim())
       : `- ${typstEscape(item.summary.trim())}`);
+    lines.push("#v(2pt)");
   }
 
   return lines;
@@ -496,6 +576,22 @@ function splitParagraphs(value) {
     .filter(Boolean);
 }
 
+function renderTypstParagraphs(value) {
+  const paragraphs = splitParagraphs(value);
+  const lines = [];
+
+  paragraphs.forEach((paragraph, index) => {
+    lines.push(typstEscape(paragraph));
+    if (index < paragraphs.length - 1) {
+      lines.push("");
+      lines.push("#v(4pt)");
+      lines.push("");
+    }
+  });
+
+  return lines;
+}
+
 function typstSection(title, topSpacingPt = 5) {
   return [
     `#v(${topSpacingPt}pt)`,
@@ -503,6 +599,10 @@ function typstSection(title, topSpacingPt = 5) {
     '#line(length: 100%, stroke: 0.6pt + rgb("d8d8d8"))',
     "#v(3pt)",
   ];
+}
+
+function formatPublicationAuthors(authors) {
+  return authors.map((author) => author === "John D. Kirwan" ? "John D. Kirwan" : author).join(", ");
 }
 
 function formatDateRange(start, end) {
@@ -529,6 +629,23 @@ function formatYear(value) {
   }
   const match = normalizeDateValue(value, "year").match(/^(\d{4})/);
   return match ? match[1] : String(value);
+}
+
+function firstPublicationUrl(links) {
+  if (!Array.isArray(links)) {
+    return "";
+  }
+
+  const preferredTypes = ["paper", "pdf", "doi", "doc"];
+  for (const type of preferredTypes) {
+    const match = links.find((link) => link?.type === type && typeof link?.url === "string" && link.url.trim());
+    if (match) {
+      return match.url.trim();
+    }
+  }
+
+  const fallback = links.find((link) => typeof link?.url === "string" && link.url.trim());
+  return fallback ? fallback.url.trim() : "";
 }
 
 function compileTypstPdf(typstInputPath, pdfOutputPath) {
@@ -585,6 +702,11 @@ function requireString(value, label) {
   }
 }
 
+function requireNonEmptyString(value, label) {
+  requireString(value, label);
+  return value.trim();
+}
+
 function requireStringArray(value, label) {
   if (!Array.isArray(value)) {
     throw new Error(`Expected an array for ${label}`);
@@ -619,6 +741,10 @@ function normalizeDateValue(value, label) {
 
 function displayUrl(value) {
   return String(value || "").replace(/^https?:\/\//, "").replace(/\/$/, "");
+}
+
+function cleanPublicationVenue(value) {
+  return String(value || "").replace(/\*/g, "").trim();
 }
 
 function relativize(filePath) {
