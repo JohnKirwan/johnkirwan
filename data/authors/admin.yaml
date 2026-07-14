@@ -1,5 +1,4 @@
 title: Dr. John D. Kirwan
-
 name:
   display: Dr. John D. Kirwan
   given: John D.
@@ -10,111 +9,331 @@ is_owner: true
 status: {}
 
 role: Bioinformatics Scientist
+headline: Computational Biologist · Bioinformatics & Machine Learning
+summary: >-
+  Computational biologist and data scientist pairing rigorous statistical modelling
+  — Bayesian inference and deep learning — with hands-on ML engineering and
+  reproducible pipelines. Nearly four years at the interface of biotech and AI
+  in an industry research setting, spanning biomolecular structure prediction,
+  generative molecular design, and metagenomic analysis, and including a
+  contribution to a NeurIPS 2025 publication on uncertainty quantification. Now
+  focusing on structure-informed metagenomics, functional annotation, and
+  antimicrobial-resistance research — applying structural and evolutionary
+  insight to large-scale biological data.
 
-affiliations:
-  - name: Arquimea Research Centre
-    url: https://www.arquimea.com/
+contact:
+  email: john@jkirwan.org
+  phone: +34 639981732
+  website: https://jkirwan.org
+  location: San Cristóbal de la Laguna, Spain
+
+photo:
+  path: assets/media/authors/admin.jpg
+  alt: John Kirwan
+  width_px: 160
+  width_mm: 32
+  include_in_markdown: true
+  include_in_pdf: true
+
+# organizations:
+#   - name: Arquimea Research Centre
+#     url: https://www.arquimea.com/
+
+# affiliations:
+#   - name: Arquimea Research Centre
+#     url: https://www.arquimea.com/
 
 links:
   - icon: brands/github
     url: https://github.com/JohnKirwan
+    label: GitHub
+    username: JohnKirwan
+    include_in_pdf: true
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/johndkirwan
+    label: LinkedIn
+    username: johndkirwan
+    include_in_pdf: true
   - icon: academicons/researchgate
     url: https://www.researchgate.net/profile/John-Kirwan-6
+    label: ResearchGate
+    username: John-Kirwan-6
+    include_in_pdf: false
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=b2UN4cEAAAAJ
+    label: Google Scholar
+    username: b2UN4cEAAAAJ
+    include_in_pdf: false
   - icon: academicons/orcid
     url: https://orcid.org/0000-0001-5537-3574
-
-bio: |-
-  I'm a computational biologist working at the interface of data science and biology - applying statistical and machine learning approaches to uncover structure in complex biological data.
-
-  My background spans experimental biology, computational modeling, and bioinformatics. After completing a PhD at Lund University focused on visual systems in invertebrates, I transitioned toward data-driven biology - developing analytical tools and predictive models that bridge biological insight and computation.
-
-  I enjoy learning new analytical methods, writing code, and communicating science clearly. My goal is to continue growing as a biological data scientist, expanding across diverse fields within the life sciences while keeping biological meaning at the core of the analysis.
+    label: ORCID
+    username: 0000-0001-5537-3574
+    include_in_pdf: true
 
 interests:
-  - Data Science
-  - Computational Biology
+  - Structural Bioinformatics
+  - Metagenomics
+  - Molecular Evolution
+  - Antimicrobial Resistance
+  - Statistical Modelling
+  - Deep Learning
 
 education:
   - degree: PhD
     area: Sensory Biology
     institution: Lund University
+    location: Sweden
     date_start: 2013-05-01
     date_end: 2018-05-07
+    summary: "Thesis: 'Spatial Vision in Diverse Invertebrates'."
+    button:
+      text: Read Thesis Introduction
+      url: https://lucris.lub.lu.se/ws/portalfiles/portal/43103387/John_Kirwan_WEBB.PDF
   - degree: MSc
     area: Molecular Evolution
     institution: University College Dublin
+    location: Ireland
     date_start: 2008-12-09
     date_end: 2010-06-01
+    summary: "Thesis: 'The Molecular Evolution of Hearing in Mammals'"
   - degree: BSc (Hons)
     area: Zoology
     institution: University College Dublin
+    location: Ireland
     date_start: 2004-09-12
     date_end: 2008-05-31
+    summary: "First Class Honours (GPA: 4.02/4.2)"
 
 experience:
-  - position: Bioinformatics Researcher
+  - position: Bioinformatics Scientist
     company_name: Arquimea Research Centre
     company_url: https://www.arquimea.com/research-development-innovation/research-center/
+    location: La Laguna, Spain
     date_start: 2022-07-04
     date_end: 2026-03-11
     summary: |-
-      My role focused on pharmaceutical bioinformatics.
-      - Structural biology, using AlphaFold and related tools
-      - Proteomics and other -omics approaches
-      - Deep learning modeling, including Pytorch and Tensorflow
-      - Biostatistics and probabilistic modelling, using PyMC and Stan
-      - Metagenomics and microbiome analysis
-  - position: Post-doctoral Researcher
+      Worked at the interface of the AI and biotech teams on structure-based drug discovery,
+      generative molecular design, and applied machine learning — the link between the
+      computational tools and the biology. Contributing author on a NeurIPS 2025 publication
+      on uncertainty quantification in deep regression.
+
+      - Built a modular synthetic-data-generation workflow orchestrating GNINA, DiffDock and AlphaFold 2; sourced datasets and handled inter-tool format conversion
+      - Predicted protein structures and binding affinities for protein complexes, including metal-ion and ATP cofactors, using Boltz, AlphaFold, Foldseek and BioEMU
+      - On the engine team of Uncharted, an internal venture building a multi-objective small-molecule optimisation platform; developed the binding-affinity objective
+      - Analysed metagenomic data, prototyped a novel operon-design approach, and ran preclinical power analyses
+      - On the NeurIPS 2025 work: ran empirical validation and fine-tuned/retrained the model in PyTorch, informed by a Bayesian / Monte Carlo perspective
+      - Ran GPU workloads on an NVIDIA DGX cluster and AWS; Docker, Git and Azure DevOps within an Agile/Scrum team
+  - position: Postdoctoral Researcher
     company_name: Stazione Zoologica Anton Dohrn
     company_url: http://www.szn.it
+    location: Naples, Italy
     date_start: 2019-10-01
-    date_end: 2022-06-22
-    summary: Researched the photic behaviour of sea urchins as part of an international HFSP collaboration. Designed and carried out behavioural experiments and performed statistical analysis.
-  - position: Project Manager - Vision Research
+    date_end: 2022-07-22
+    summary: |-
+      Quantitative sensory biology within an international Human Frontier Science Program (HFSP)
+      collaboration, with emphasis on statistical modelling and signal processing of behavioural data.
+
+      - Analysed experimental data using Bayesian multilevel regression models in R and Stan
+      - Designed and executed behavioural experiments with automated data acquisition pipelines
+      - Contributed to interdisciplinary publications spanning biology, optics, and computation
+  - position: Project Manager (contract)
     company_name: Lund University
     company_url: http://www.lu.se
+    location: Lund, Sweden
     date_start: 2019-06-01
     date_end: 2019-08-31
-    summary: Carried out vision science behavioural experiments and analysis using R, Matlab and Python.
+    summary: >-
+      Short-term research management contract supervising experimental data
+      collection and a masters student, bridging doctoral and postdoctoral positions.
   - position: Doctoral Researcher
     company_name: Lund University
     company_url: http://www.lu.se
+    location: Lund, Sweden
     date_start: 2013-05-15
     date_end: 2018-06-07
-    summary: Wrote my PhD thesis 'Spatial Vision in Diverse Invertebrates' at the Lund Vision Group, Sweden.
+    summary: |-
+      Computational and statistical analysis of visual systems in invertebrates,
+      combining experimental biology with quantitative modelling.
+
+      - Built statistical models using Bayesian multilevel regression in R and Stan; additional analysis in Python and Matlab
+      - Developed optical and geometric models to estimate spatial resolution theoretically
+      - Designed novel experimental protocols for quantifying animal visual performance
 
 skills:
   - name: Technical Skills
+    include_in_pdf: true
     items:
       - name: Python
+        description: ""
+        percent: 90
+        icon: code-bracket
+      - name: R
+        description: ""
+        percent: 70
+        icon: code-bracket
+      - name: PyTorch
+        description: ""
+        percent: 75
+        icon: code-bracket
+      - name: TensorFlow
+        description: ""
+        percent: 65
+        icon: code-bracket
+      - name: Machine Learning
+        description: ""
+        percent: 85
+        icon: chart-bar
+      - name: Deep Learning
+        description: ""
+        percent: 80
+        icon: chart-bar
+      - name: Statistical Modelling
+        description: ""
+        percent: 85
+        icon: chart-bar
+      - name: Bayesian Statistics
+        description: ""
+        percent: 80
+        icon: chart-bar
+      - name: Protein Structure Prediction
+        description: ""
+        percent: 75
+        icon: chart-bar
+      - name: Structural Bioinformatics
+        description: ""
+        percent: 75
+        icon: chart-bar
+      - name: Metagenomics
+        description: ""
+        percent: 70
+        icon: chart-bar
+      - name: Docker
+        description: ""
+        percent: 70
+        icon: code-bracket
+      - name: Git
+        description: ""
         percent: 80
         icon: code-bracket
-      - name: Data Science
+      - name: Azure DevOps
+        description: ""
+        percent: 70
+        icon: code-bracket
+      - name: AWS
+        description: ""
+        percent: 55
+        icon: code-bracket
+      - name: Valohai
+        description: ""
+        percent: 70
+        icon: code-bracket
+      - name: Matlab
+        description: ""
+        percent: 60
+        icon: code-bracket
+  - name: Hobbies
+    include_in_pdf: false
+    color: "#eeac02"
+    color_border: "#f0bf23"
+    items:
+      - name: Hiking
+        description: ""
+        percent: 60
+        icon: person-simple-walk
+      - name: Reading
+        description: ""
         percent: 100
-        icon: chart-bar
-      - name: R
-        percent: 40
-        icon: circle-stack
+        icon: cat
+      - name: Photography
+        description: ""
+        percent: 80
+        icon: camera
 
 languages:
   - name: English
+    level: Native
     percent: 100
-  - name: Swedish
-    percent: 50
   - name: Spanish
+    level: B2
+    percent: 50
+  - name: Swedish
+    level: B2
     percent: 50
 
 awards:
+  - title: Pharmaceutical Bioinformatics & Applied Pharmaceutical Bioinformatics
+    awarder: Uppsala University
+    url: http://www.pharmbio.org
+    date: 2020-05-31
+    summary: Pass with Distinction
   - title: Customising your models with TensorFlow 2
     awarder: Coursera / Imperial College London
-    date: '2025-08-14'
+    icon: coursera
+    url: https://www.coursera.org/learn/customising-models-tensorflow2
+    certificate_url: https://www.coursera.org/account/accomplishments/verify/Y334QC7PYYL6
+    date: 2025-08-14
   - title: Valohai MLOps Fundamentals Certification
     awarder: Valohai
-    date: '2025-08-12'
+    icon: simpleicons/valohai
+    url: https://learn.valohai.academy/collections/efa3043e-5a9f-11ed-8850-06c0361096e5
+    certificate_url: https://learn.valohai.academy/certificate/NCXTeIcmIw
+    date: 2025-08-12
   - title: Applied Software Engineering Fundamentals Specialization
     awarder: Coursera / IBM
-    date: '2023-03-10'
+    icon: coursera
+    url: https://www.coursera.org/specializations/software-engineering-fundamentals
+    certificate_url: https://coursera.org/share/d217c2ee9082940b903d22e46d3e8062
+    date: 2023-03-10
+    summary: Covers Git, GitHub, Linux, and Python, and the fundamentals of software engineering.
+  - title: Mountain Leader Award
+    awarder: Mountain Leader Training Scotland
+    url: https://www.mountain-training.org/qualifications/walking/mountain-leader
+    certificate_url: https://mt.tahdah.me/profile/index/95316
+    date: 2011-10-01
+    summary: Professional certification to lead hillwalking groups.
+
+bio: |-
+  Computational biologist and data scientist with a track record of applying machine
+  learning and statistical modelling to complex biological problems — from biomolecular
+  structure prediction and de novo peptide design to metagenomic analysis and preclinical
+  trial design.
+
+  My background combines rigorous quantitative training (Bayesian modelling, deep learning,
+  MLOps) with hands-on experience across the full data pipeline — from experimental design
+  through to deployment and reproducible reporting. I have worked at the interface of Biotech
+  and AI in an industry research setting, contributing to work that reached commercial spinout
+  stage and to a NeurIPS 2025 publication on uncertainty quantification in deep regression.
+
+  I am now focusing on structure-informed metagenomics, functional annotation, and
+  antimicrobial-resistance research — applying the same analytical rigour to questions where
+  structural and evolutionary insight meets large-scale biological data, with an eye to
+  applications across health, agriculture, and the environment.
+
+resume_pdf:
+  output: static/uploads/resume.pdf
+  skill_group_names:
+    - Technical Skills
+  include_awards: true
+  page_one:
+    key_highlights:
+      - Computational biologist with nearly four years at the AI-biotech interface in industry research
+      - Experience spanning structure prediction, binding-affinity modelling, metagenomics, and uncertainty quantification
+      - Hands-on ML engineering with PyTorch, Docker, AWS, Azure DevOps, and GPU workflows
+      - Research background grounded in Bayesian modelling, quantitative biology, and reproducible analysis
+    featured_skill_names:
+      - Python
+      - R
+      - PyTorch
+      - Machine Learning
+      - Deep Learning
+      - Bayesian Statistics
+      - Protein Structure Prediction
+      - Structural Bioinformatics
+      - Metagenomics
+      - Docker
+    featured_experience_positions:
+      - Bioinformatics Scientist
+      - Postdoctoral Researcher
+    featured_education_degrees:
+      - PhD
+      - MSc
