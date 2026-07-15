@@ -16,3 +16,4 @@ assets/jsconfig.json
 **/*_files/
 **/.quarto/
 **/*.rmarkdown
+/.*/

@@ -402,14 +402,25 @@ function renderTypstProfile(profile) {
   if (!handle) {
     throw new Error(`Missing profile username/url for ${profile.label}`);
   }
+  const displayHandle = formatProfileDisplayHandle(profile, handle);
 
   const iconPath = getMaterializedProfileIconPath(profile.icon);
-  if (!iconPath) {
-    return [`#text(weight: "semibold")[${typstEscape(profile.label)}] #h(4pt) ${typstEscape(handle)}\\`];
+  const rowContent = iconPath
+    ? `#box[#box(height: 8.5pt, image("${typstEscape(slash(path.posix.relative("build", iconPath)))}", width: 8.5pt)) #h(1.2pt) ${typstEscape(displayHandle)}]`
+    : `#box[#text(weight: "semibold")[${typstEscape(profile.label)}] #h(1.2pt) ${typstEscape(displayHandle)}]`;
+
+  if (profile.url) {
+    return [`#link("${typstEscape(profile.url)}")[${rowContent}]\\`];
   }
 
-  const relativeIconPath = slash(path.posix.relative("build", iconPath));
-  return [`#image("${typstEscape(relativeIconPath)}", width: 8.5pt) #h(4pt) ${typstEscape(handle)}\\`];
+  return [`${rowContent}\\`];
+}
+
+function formatProfileDisplayHandle(profile, handle) {
+  if (profile.icon === "academicons/orcid") {
+    return handle.replace(/^0000-00/, "");
+  }
+  return handle;
 }
 
 function materializeProfileIcons(profiles, outputDir) {
@@ -420,12 +431,17 @@ function materializeProfileIcons(profiles, outputDir) {
   )];
 
   for (const iconName of iconNames) {
-    const svg = loadThemeIconSvg(iconName);
-    if (!svg) {
+    const iconFile = loadIconFile(iconName);
+    if (!iconFile) {
       continue;
     }
     const config = getIconLookupConfig(iconName);
-    fs.writeFileSync(path.join(outputDir, `${config.pack}-${config.name}.svg`), svg, "utf8");
+    const outputPath = path.join(outputDir, `${config.pack}-${config.name}${config.extension}`);
+    if (typeof iconFile === "string") {
+      fs.writeFileSync(outputPath, iconFile, "utf8");
+    } else {
+      fs.writeFileSync(outputPath, iconFile);
+    }
   }
 }
 
@@ -434,13 +450,19 @@ function getMaterializedProfileIconPath(iconName) {
   if (!config) {
     return "";
   }
-  return path.join(buildIconsDir, `${config.pack}-${config.name}.svg`);
+  return path.join(buildIconsDir, `${config.pack}-${config.name}${config.extension}`);
 }
 
-function loadThemeIconSvg(iconName) {
+function loadIconFile(iconName) {
   const config = getIconLookupConfig(iconName);
   if (!config) {
     return "";
+  }
+
+  if (config.customPath) {
+    return config.extension === ".svg"
+      ? fs.readFileSync(config.customPath, "utf8")
+      : fs.readFileSync(config.customPath);
   }
 
   const iconPack = loadIconPack(config.packFile);
@@ -459,14 +481,27 @@ function getIconLookupConfig(iconName) {
     "brands/google-scholar": "brands/googlescholar",
   };
   const canonical = aliases[iconName] || iconName;
+  const [pack, name] = canonical.split("/");
+  if (!pack || !name) {
+    return null;
+  }
+
+  const customPath = path.join(repoRoot, "assets/media/icons", pack, `${name}.svg`);
+  const customPngPath = path.join(repoRoot, "assets/media/icons", pack, `${name}.png`);
+  if (fs.existsSync(customPngPath)) {
+    return { pack, name, customPath: customPngPath, extension: ".png" };
+  }
+  if (fs.existsSync(customPath)) {
+    return { pack, name, customPath, extension: ".svg" };
+  }
 
   switch (canonical) {
     case "brands/github":
-      return { pack: "brands", name: "github", packFile: themeIconPackPath("brands") };
+      return { pack: "brands", name: "github", packFile: themeIconPackPath("brands"), extension: ".svg" };
     case "brands/linkedin":
-      return { pack: "brands", name: "linkedin", packFile: themeIconPackPath("brands") };
+      return { pack: "brands", name: "linkedin", packFile: themeIconPackPath("brands"), extension: ".svg" };
     case "academicons/orcid":
-      return { pack: "academicons", name: "orcid", packFile: themeIconPackPath("academicons") };
+      return { pack: "academicons", name: "orcid", packFile: themeIconPackPath("academicons"), extension: ".svg" };
     default:
       return null;
   }
