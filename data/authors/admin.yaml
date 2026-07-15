@@ -66,6 +66,11 @@ links:
     label: ORCID
     username: 0000-0001-5537-3574
     include_in_pdf: true
+  - icon: simpleicons/ropensci
+    url: https://johnkirwan.r-universe.dev/packages
+    label: r-universe
+    username: johnkirwan
+    include_in_pdf: true
 
 interests:
   - Structural Bioinformatics
@@ -300,11 +305,6 @@ bio: |-
   through to deployment and reproducible reporting. I have worked at the interface of Biotech
   and AI in an industry research setting, contributing to work that reached commercial spinout
   stage and to a NeurIPS 2025 publication on uncertainty quantification in deep regression.
-
-  I am now focusing on structure-informed metagenomics, functional annotation, and
-  antimicrobial-resistance research — applying the same analytical rigour to questions where
-  structural and evolutionary insight meets large-scale biological data, with an eye to
-  applications across health, agriculture, and the environment.
 
 resume_pdf:
   output: static/uploads/resume.pdf
