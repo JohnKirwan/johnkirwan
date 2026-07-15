@@ -10,13 +10,37 @@ collections:
     files:
       - name: profile
         label: Profile
-        file: content/authors/admin/_index.md
+        file: data/authors/admin.yaml
         fields:
           - {label: Display Name, name: title, widget: string}
-          - {label: First Name, name: first_name, widget: string, required: false}
-          - {label: Last Name, name: last_name, widget: string, required: false}
-          - {label: Role, name: role, widget: string, required: false}
-          - {label: Highlight Name, name: highlight_name, widget: boolean, required: false, default: true}
+          - label: Name
+            name: name
+            widget: object
+            fields:
+              - {label: Display, name: display, widget: string}
+              - {label: Given, name: given, widget: string, required: false}
+              - {label: Family, name: family, widget: string, required: false}
+          - {label: Role, name: role, widget: string}
+          - {label: Headline, name: headline, widget: string, required: false}
+          - {label: Summary, name: summary, widget: text}
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - {label: Email, name: email, widget: string}
+              - {label: Phone, name: phone, widget: string, required: false}
+              - {label: Website, name: website, widget: string, required: false}
+              - {label: Location, name: location, widget: string, required: false}
+          - label: Photo
+            name: photo
+            widget: object
+            fields:
+              - {label: Path, name: path, widget: string}
+              - {label: Alt, name: alt, widget: string, required: false}
+              - {label: Width PX, name: width_px, widget: number, value_type: int, required: false}
+              - {label: Width MM, name: width_mm, widget: number, value_type: int, required: false}
+              - {label: Include In Markdown, name: include_in_markdown, widget: boolean, required: false, default: true}
+              - {label: Include In PDF, name: include_in_pdf, widget: boolean, required: false, default: true}
           - {label: Superuser, name: superuser, widget: boolean, required: false, default: true}
           - label: Organizations
             name: organizations
@@ -25,22 +49,26 @@ collections:
             fields:
               - {label: Name, name: name, widget: string}
               - {label: URL, name: url, widget: string, required: false}
-          - label: Profiles
-            name: profiles
+          - label: Links
+            name: links
             widget: list
             required: false
             fields:
+              - {label: Label, name: label, widget: string}
               - {label: Icon, name: icon, widget: string}
               - {label: URL, name: url, widget: string}
-              - {label: Label, name: label, widget: string, required: false}
+              - {label: Username, name: username, widget: string, required: false}
+              - {label: Include In PDF, name: include_in_pdf, widget: boolean, required: false, default: true}
           - {label: Interests, name: interests, widget: list, required: false}
           - label: Education
             name: education
             widget: list
             required: false
             fields:
+              - {label: Degree, name: degree, widget: string}
               - {label: Area, name: area, widget: string}
               - {label: Institution, name: institution, widget: string}
+              - {label: Location, name: location, widget: string, required: false}
               - {label: Start Date, name: date_start, widget: string, required: false}
               - {label: End Date, name: date_end, widget: string, required: false}
               - {label: Summary, name: summary, widget: markdown, required: false}
@@ -51,15 +79,15 @@ collections:
                 fields:
                   - {label: Text, name: text, widget: string, required: false}
                   - {label: URL, name: url, widget: string, required: false}
-          - label: Work
-            name: work
+          - label: Experience
+            name: experience
             widget: list
             required: false
             fields:
               - {label: Position, name: position, widget: string}
               - {label: Company Name, name: company_name, widget: string}
               - {label: Company URL, name: company_url, widget: string, required: false}
-              - {label: Company Logo, name: company_logo, widget: string, required: false}
+              - {label: Location, name: location, widget: string, required: false}
               - {label: Start Date, name: date_start, widget: string, required: false}
               - {label: End Date, name: date_end, widget: string, required: false}
               - {label: Summary, name: summary, widget: markdown, required: false}
@@ -69,6 +97,7 @@ collections:
             required: false
             fields:
               - {label: Name, name: name, widget: string}
+              - {label: Include In PDF, name: include_in_pdf, widget: boolean, required: false, default: true}
               - {label: Color, name: color, widget: string, required: false}
               - {label: Border Color, name: color_border, widget: string, required: false}
               - label: Items
@@ -86,6 +115,7 @@ collections:
             required: false
             fields:
               - {label: Name, name: name, widget: string}
+              - {label: Level, name: level, widget: string, required: false}
               - {label: Percent, name: percent, widget: number, value_type: int, required: false}
           - label: Awards
             name: awards
@@ -99,7 +129,24 @@ collections:
               - {label: Certificate URL, name: certificate_url, widget: string, required: false}
               - {label: Date, name: date, widget: string, required: false}
               - {label: Summary, name: summary, widget: markdown, required: false}
-          - {label: Bio, name: body, widget: markdown, required: false}
+          - {label: Bio, name: bio, widget: markdown, required: false}
+          - label: Resume PDF
+            name: resume_pdf
+            widget: object
+            required: false
+            fields:
+              - {label: Output, name: output, widget: string, required: false}
+              - {label: Include Awards, name: include_awards, widget: boolean, required: false, default: true}
+              - {label: Skill Group Names, name: skill_group_names, widget: list, required: false}
+              - label: Page One
+                name: page_one
+                widget: object
+                required: false
+                fields:
+                  - {label: Key Highlights, name: key_highlights, widget: list, required: false}
+                  - {label: Featured Skill Names, name: featured_skill_names, widget: list, required: false}
+                  - {label: Featured Experience Positions, name: featured_experience_positions, widget: list, required: false}
+                  - {label: Featured Education Degrees, name: featured_education_degrees, widget: list, required: false}
       - name: teaching
         label: Teaching
         file: content/teaching/_index.md
