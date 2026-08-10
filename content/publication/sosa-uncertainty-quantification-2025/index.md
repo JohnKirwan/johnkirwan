@@ -13,9 +13,9 @@ hugoblox:
     doi: ""
 links:
 - type: paper
-  url: https://openreview.net/forum?id=ZL7RuWd6QK
+  url: https://doi.org/10.52202/085713-1692
 - type: pdf
-  url: https://openreview.net/pdf?id=ZL7RuWd6QK
+  url: https://www.proceedings.com/content/085/085713-1692open.pdf
 - type: slides
   url: https://neurips.cc/media/neurips-2025/Slides/117361.pdf
 featured: true
