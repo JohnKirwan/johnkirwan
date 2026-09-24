@@ -116,14 +116,13 @@ experience:
     summary: |-
       Worked at the interface of the AI and biotech teams on structure-based drug discovery,
       generative molecular design, and applied machine learning — the link between the
-      computational tools and the biology. Contributing author on a NeurIPS 2025 publication
-      on uncertainty quantification in deep regression.
+      computational tools and the biology.
 
-      - Built a modular synthetic-data-generation workflow orchestrating GNINA, DiffDock and AlphaFold 2; sourced datasets and handled inter-tool format conversion
+      - Contributing author on a NeurIPS 2025 paper on uncertainty quantification for deep regression: ran the empirical validation and fine-tuned/retrained models in PyTorch
+      - Built a modular synthetic-data-generation pipeline orchestrating GNINA, DiffDock and AlphaFold 2, including dataset sourcing and inter-tool format conversion
       - Predicted protein structures and binding affinities for protein complexes, including metal-ion and ATP cofactors, using Boltz, AlphaFold, Foldseek and BioEMU
-      - On the engine team of Uncharted, an internal venture building a multi-objective small-molecule optimisation platform; developed the binding-affinity objective
-      - Analysed metagenomic data, prototyped a novel operon-design approach, and ran preclinical power analyses
-      - On the NeurIPS 2025 work: ran empirical validation and fine-tuned/retrained the model in PyTorch, informed by a Bayesian / Monte Carlo perspective
+      - Developed the binding-affinity objective for Uncharted, an internal venture building a multi-objective small-molecule optimisation engine
+      - Analysed metagenomic data, prototyped a novel operon-design approach, and ran statistical power analyses for preclinical study design
       - Ran GPU workloads on an NVIDIA DGX cluster and AWS; Docker, Git and Azure DevOps within an Agile/Scrum team
   - position: Postdoctoral Researcher
     company_name: Stazione Zoologica Anton Dohrn
@@ -173,6 +172,18 @@ skills:
         description: ""
         percent: 70
         icon: code-bracket
+      - name: pandas
+        description: ""
+        percent: 85
+        icon: code-bracket
+      - name: scikit-learn
+        description: ""
+        percent: 75
+        icon: code-bracket
+      - name: Stan
+        description: ""
+        percent: 75
+        icon: code-bracket
       - name: PyTorch
         description: ""
         percent: 75
@@ -194,6 +205,14 @@ skills:
         percent: 85
         icon: chart-bar
       - name: Bayesian Statistics
+        description: ""
+        percent: 80
+        icon: chart-bar
+      - name: Experimental Design
+        description: ""
+        percent: 80
+        icon: chart-bar
+      - name: Data Visualisation
         description: ""
         percent: 80
         icon: chart-bar
@@ -294,6 +313,14 @@ awards:
     date: 2011-10-01
     summary: Professional certification to lead hillwalking groups.
 
+software:
+  - name: radiatR
+    url: https://github.com/JohnKirwan/radiatR
+    summary: R package and Shiny app for circular-arena tracking data; imports from 20+ tracking tools, circular statistics and figures
+  - name: luxR
+    url: https://github.com/JohnKirwan/luxR
+    summary: R package and Shiny app for modelling underwater light environments, photoreceptor excitation and visual contrast
+
 bio: |-
   Computational biologist and data scientist with a track record of applying machine
   learning and statistical modelling to complex biological problems — from biomolecular
@@ -303,20 +330,20 @@ bio: |-
   My background combines rigorous quantitative training (Bayesian modelling, deep learning,
   MLOps) with hands-on experience across the full data pipeline — from experimental design
   through to deployment and reproducible reporting. I have worked at the interface of Biotech
-  and AI in an industry research setting, contributing to work that reached commercial spinout
-  stage and to a NeurIPS 2025 publication on uncertainty quantification in deep regression.
+  and AI in an industry research setting, contributing to an internal venture building a
+  molecular optimisation engine and to a NeurIPS 2025 publication on uncertainty quantification in deep regression.
 
 resume_pdf:
   output: static/uploads/resume.pdf
   skill_group_names:
     - Technical Skills
   include_awards: true
+  max_highlights: 6
   page_one:
     key_highlights:
-      - Computational biologist with nearly four years at the AI-biotech interface in industry research
-      - Experience spanning structure prediction, binding-affinity modelling, metagenomics, and uncertainty quantification
-      - Hands-on ML engineering with PyTorch, Docker, AWS, Azure DevOps, and GPU workflows
-      - Research background grounded in Bayesian modelling, quantitative biology, and reproducible analysis
+      - "Drug-discovery ML: structure prediction, docking and binding-affinity modelling in industry R&D"
+      - "Bayesian multilevel modelling (R, Stan) underpinning peer-reviewed work in quantitative biology"
+      - "Open-source R packages with browser-based Shiny apps: radiatR and luxR"
     featured_skill_names:
       - Python
       - R
@@ -335,3 +362,33 @@ resume_pdf:
       - PhD
       - MSc
       - BSc (Hons)
+  variants:
+    data-science:
+      output: static/uploads/John_Kirwan_CV_Data_Science.pdf
+      headline: Data Scientist · Statistical Modelling · Machine Learning · Life Sciences
+      role: Data Scientist
+      summary: >-
+        Data scientist with a PhD and a background in computational biology, combining
+        rigorous statistical modelling — Bayesian inference, experimental design and
+        uncertainty quantification — with practical machine learning in Python and R.
+        Nearly four years in industry R&D building data pipelines, training and validating
+        deep-learning models, and translating results for experimental scientists, including
+        a contribution to a NeurIPS 2025 paper on uncertainty quantification.
+      page_one:
+        key_highlights:
+          - "Uncertainty-aware modelling: Bayesian multilevel models (R, Stan) and deep-learning uncertainty quantification"
+          - "Experimental design and power analysis, from behavioural experiments to preclinical studies"
+          - "Data products: open-source R packages with interactive Shiny apps (radiatR, luxR)"
+        featured_skill_names:
+          - Python
+          - R
+          - pandas
+          - scikit-learn
+          - PyTorch
+          - Stan
+          - Statistical Modelling
+          - Bayesian Statistics
+          - Experimental Design
+          - Data Visualisation
+          - Machine Learning
+          - Docker

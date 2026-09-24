@@ -17,3 +17,7 @@ assets/jsconfig.json
 **/.quarto/
 **/*.rmarkdown
 /.*/
+
+TODO.md
+# Local planning/drafts
+dev/

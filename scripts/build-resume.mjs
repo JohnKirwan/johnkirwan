@@ -15,20 +15,27 @@ const typstPath = path.join(buildDir, "resume.typ");
 const compilePdfFlag = process.argv.includes("--pdf");
 
 const resume = loadResume(sourcePath);
+const builds = [
+  { resume, typstPath },
+  ...Object.entries(resume.pdf.variants).map(([name, variant]) => ({
+    resume: applyVariant(resume, name, variant),
+    typstPath: path.join(buildDir, `resume-${name}.typ`),
+  })),
+];
 
 fs.mkdirSync(buildDir, { recursive: true });
 fs.mkdirSync(buildIconsDir, { recursive: true });
 materializeProfileIcons(resume.profiles, buildIconsDir);
-fs.writeFileSync(typstPath, renderTypst(resume), "utf8");
 
-const generated = [
-  relativize(typstPath),
-];
-
-if (compilePdfFlag) {
-  const pdfOutputPath = path.join(repoRoot, resume.pdf.output);
-  compileTypstPdf(typstPath, pdfOutputPath);
-  generated.push(relativize(pdfOutputPath));
+const generated = [];
+for (const build of builds) {
+  fs.writeFileSync(build.typstPath, renderTypst(build.resume), "utf8");
+  generated.push(relativize(build.typstPath));
+  if (compilePdfFlag) {
+    const pdfOutputPath = path.join(repoRoot, build.resume.pdf.output);
+    compileTypstPdf(build.typstPath, pdfOutputPath);
+    generated.push(relativize(pdfOutputPath));
+  }
 }
 
 console.log(`Updated ${generated.join(", ")}`);
@@ -64,16 +71,15 @@ function loadResume(filePath) {
   author.resume_pdf.output ??= "static/uploads/resume.pdf";
   author.resume_pdf.skill_group_names ??= [];
   author.resume_pdf.include_awards ??= true;
+  author.resume_pdf.max_highlights ??= 3;
+  author.resume_pdf.variants ??= {};
   author.resume_pdf.page_one ??= {};
   author.resume_pdf.page_one.key_highlights ??= [];
   author.resume_pdf.page_one.featured_skill_names ??= [];
   author.resume_pdf.page_one.featured_experience_positions ??= [];
   author.resume_pdf.page_one.featured_education_degrees ??= [];
 
-  requireStringArray(author.resume_pdf.page_one.key_highlights, "resume_pdf.page_one.key_highlights");
-  requireStringArray(author.resume_pdf.page_one.featured_skill_names, "resume_pdf.page_one.featured_skill_names");
-  requireStringArray(author.resume_pdf.page_one.featured_experience_positions, "resume_pdf.page_one.featured_experience_positions");
-  requireStringArray(author.resume_pdf.page_one.featured_education_degrees, "resume_pdf.page_one.featured_education_degrees");
+  validatePageOne(author.resume_pdf.page_one, "resume_pdf.page_one");
 
   return {
     basics: {
@@ -139,10 +145,35 @@ function loadResume(filePath) {
       ...award,
       date: normalizeDateValue(award.date, `awards.${award.title}.date`),
     })),
+    software: author.software ?? [],
     publications: loadPublications(author),
     bio: splitParagraphs(author.bio || ""),
     pdf: author.resume_pdf,
   };
+}
+
+function validatePageOne(pageOne, label) {
+  for (const key of ["key_highlights", "featured_skill_names", "featured_experience_positions", "featured_education_degrees"]) {
+    requireStringArray(pageOne[key], `${label}.${key}`);
+  }
+}
+
+// A variant overrides basics (headline/role/summary) and any resume_pdf setting of the base CV.
+function applyVariant(base, name, variant) {
+  requireString(variant.output, `resume_pdf.variants.${name}.output`);
+  const { headline, role, summary, page_one, ...pdf } = variant;
+  const merged = {
+    ...base,
+    basics: {
+      ...base.basics,
+      headline: headline ?? base.basics.headline,
+      role: role ?? base.basics.role,
+      summary: summary ?? base.basics.summary,
+    },
+    pdf: { ...base.pdf, ...pdf, page_one: { ...base.pdf.page_one, ...page_one } },
+  };
+  validatePageOne(merged.pdf.page_one, `resume_pdf.variants.${name}.page_one`);
+  return merged;
 }
 
 function loadPublications(author) {
@@ -283,7 +314,7 @@ function renderTypst(resume) {
 
   lines.push("", ...typstSection("Recent Experience", 6).map((line) => `    ${line}`));
   for (const item of pageOneExperience) {
-    lines.push(...renderTypstExperience(item, 3).map((line) => `    ${line}`), "");
+    lines.push(...renderTypstExperience(item, resume.pdf.max_highlights).map((line) => `    ${line}`), "");
   }
 
   lines.push(...typstSection("Education", 6).map((line) => `    ${line}`));
@@ -299,7 +330,7 @@ function renderTypst(resume) {
   if (remainingExperience.length) {
     lines.push(...typstSection("Additional Experience", 6));
     for (const item of remainingExperience) {
-      lines.push(...renderTypstExperience(item, 3), "");
+      lines.push(...renderTypstExperience(item, resume.pdf.max_highlights), "");
     }
   }
 
@@ -308,6 +339,15 @@ function renderTypst(resume) {
     for (const item of remainingEducation) {
       lines.push(...renderTypstEducation(item), "");
     }
+  }
+
+  if (resume.software.length) {
+    lines.push(...typstSection("Open-Source Software", 6));
+    for (const item of resume.software) {
+      const name = item.url ? `#link("${typstEscape(item.url)}")[${typstEscape(item.name)}]` : typstEscape(item.name);
+      lines.push(`- #text(weight: "semibold")[${name}] — ${typstEscape(item.summary || "")}`);
+    }
+    lines.push("");
   }
 
   if (resume.pdf.include_awards && resume.awards.length) {
@@ -402,25 +442,17 @@ function renderTypstProfile(profile) {
   if (!handle) {
     throw new Error(`Missing profile username/url for ${profile.label}`);
   }
-  const displayHandle = formatProfileDisplayHandle(profile, handle);
 
   const iconPath = getMaterializedProfileIconPath(profile.icon);
   const rowContent = iconPath
-    ? `#box[#box(height: 8.5pt, image("${typstEscape(slash(path.posix.relative("build", iconPath)))}", width: 8.5pt)) #h(1.2pt) ${typstEscape(displayHandle)}]`
-    : `#box[#text(weight: "semibold")[${typstEscape(profile.label)}] #h(1.2pt) ${typstEscape(displayHandle)}]`;
+    ? `#box[#box(height: 8.5pt, image("${typstEscape(slash(path.posix.relative("build", iconPath)))}", width: 8.5pt)) #h(1.2pt) #text(size: 8pt)[${typstEscape(handle)}]]`
+    : `#box[#text(weight: "semibold")[${typstEscape(profile.label)}] #h(1.2pt) ${typstEscape(handle)}]`;
 
   if (profile.url) {
     return [`#link("${typstEscape(profile.url)}")[${rowContent}]\\`];
   }
 
   return [`${rowContent}\\`];
-}
-
-function formatProfileDisplayHandle(profile, handle) {
-  if (profile.icon === "academicons/orcid") {
-    return handle.replace(/^0000-00/, "");
-  }
-  return handle;
 }
 
 function materializeProfileIcons(profiles, outputDir) {
