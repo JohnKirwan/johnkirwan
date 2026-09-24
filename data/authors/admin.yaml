@@ -82,31 +82,37 @@ interests:
 
 education:
   - degree: PhD
-    area: Sensory Biology
+    area: Biology (Vision Science)
     institution: Lund University
     location: Sweden
     date_start: 2013-05-01
-    date_end: 2018-05-07
+    date_end: 2018-06-07
     summary: "Thesis: 'Spatial Vision in Diverse Invertebrates'."
     button:
       text: Read Thesis Introduction
       url: https://lucris.lub.lu.se/ws/portalfiles/portal/43103387/John_Kirwan_WEBB.PDF
-  - degree: MSc
-    area: Molecular Evolution
+  - degree: MSc by Research
+    area: Biology (Molecular Evolution)
     institution: University College Dublin
     location: Ireland
-    date_start: 2008-12-09
-    date_end: 2010-06-01
+    date_start: 2008-09-06
+    date_end: 2010-09-23
     summary: "Thesis: 'The Molecular Evolution of Hearing in Mammals'"
   - degree: BSc (Hons)
     area: Zoology
     institution: University College Dublin
     location: Ireland
     date_start: 2004-09-12
-    date_end: 2008-05-31
-    summary: "First Class Honours (GPA: 4.02/4.2)"
+    date_end: 2008-06-13
+    summary: "First Class Honours; UCD Zoology Medal (2008)"
 
 experience:
+  - position: Freelance Bioinformatics Scientist
+    company_name: Self-employed
+    location: Spain
+    date_start: 2026-07-01
+    date_end: ""
+    summary: ""
   - position: Bioinformatics Scientist
     company_name: Arquimea Research Centre
     company_url: https://www.arquimea.com/research-development-innovation/research-center/
@@ -116,14 +122,13 @@ experience:
     summary: |-
       Worked at the interface of the AI and biotech teams on structure-based drug discovery,
       generative molecular design, and applied machine learning — the link between the
-      computational tools and the biology. Contributing author on a NeurIPS 2025 publication
-      on uncertainty quantification in deep regression.
+      computational tools and the biology.
 
-      - Built a modular synthetic-data-generation workflow orchestrating GNINA, DiffDock and AlphaFold 2; sourced datasets and handled inter-tool format conversion
-      - Predicted protein structures and binding affinities for protein complexes, including metal-ion and ATP cofactors, using Boltz, AlphaFold, Foldseek and BioEMU
-      - On the engine team of Uncharted, an internal venture building a multi-objective small-molecule optimisation platform; developed the binding-affinity objective
-      - Analysed metagenomic data, prototyped a novel operon-design approach, and ran preclinical power analyses
-      - On the NeurIPS 2025 work: ran empirical validation and fine-tuned/retrained the model in PyTorch, informed by a Bayesian / Monte Carlo perspective
+      - Contributing author on a NeurIPS 2025 paper on uncertainty quantification for deep regression: ran the empirical validation and fine-tuned/retrained models in PyTorch
+      - Built a modular synthetic-data-generation pipeline (Python, Biopython) orchestrating GNINA, DiffDock and AlphaFold 2, including dataset sourcing and inter-tool format conversion
+      - Predicted structures and binding affinities for protein and protein–peptide complexes, including metal-ion and ATP cofactors, and designed de novo peptides, using Boltz, BoltzGen, AlphaFold, Foldseek and BioEMU
+      - Developed the binding-affinity objective for the multi-objective small-molecule optimisation engine of Uncharted, a venture that spun out as Uncharted Chem
+      - Applied AI tools and data analysis to cancer-research and gut-microbiota (metagenomic) programmes; prototyped a novel operon-design approach for extremophile bacteria and ran statistical power analyses for preclinical studies
       - Ran GPU workloads on an NVIDIA DGX cluster and AWS; Docker, Git and Azure DevOps within an Agile/Scrum team
   - position: Postdoctoral Researcher
     company_name: Stazione Zoologica Anton Dohrn
@@ -173,6 +178,22 @@ skills:
         description: ""
         percent: 70
         icon: code-bracket
+      - name: pandas
+        description: ""
+        percent: 85
+        icon: code-bracket
+      - name: scikit-learn
+        description: ""
+        percent: 75
+        icon: code-bracket
+      - name: Biopython
+        description: ""
+        percent: 80
+        icon: code-bracket
+      - name: Stan
+        description: ""
+        percent: 75
+        icon: code-bracket
       - name: PyTorch
         description: ""
         percent: 75
@@ -197,11 +218,27 @@ skills:
         description: ""
         percent: 80
         icon: chart-bar
+      - name: Experimental Design
+        description: ""
+        percent: 80
+        icon: chart-bar
+      - name: Data Visualisation
+        description: ""
+        percent: 80
+        icon: chart-bar
       - name: Protein Structure Prediction
         description: ""
         percent: 75
         icon: chart-bar
       - name: Structural Bioinformatics
+        description: ""
+        percent: 75
+        icon: chart-bar
+      - name: Proteomics
+        description: ""
+        percent: 70
+        icon: chart-bar
+      - name: Uncertainty Quantification
         description: ""
         percent: 75
         icon: chart-bar
@@ -263,6 +300,9 @@ languages:
     percent: 50
 
 awards:
+  - title: Deep Learning with PyTorch
+    awarder: IBM
+    date: 2026-09-01
   - title: Pharmaceutical Bioinformatics & Applied Pharmaceutical Bioinformatics
     awarder: Uppsala University
     url: http://www.pharmbio.org
@@ -287,12 +327,24 @@ awards:
     certificate_url: https://coursera.org/share/d217c2ee9082940b903d22e46d3e8062
     date: 2023-03-10
     summary: Covers Git, GitHub, Linux, and Python, and the fundamentals of software engineering.
+  - title: Writing in the Sciences
+    awarder: Stanford University (online)
+    date: 2019-05-14
+    summary: Statement of Accomplishment with Distinction
   - title: Mountain Leader Award
     awarder: Mountain Leader Training Scotland
     url: https://www.mountain-training.org/qualifications/walking/mountain-leader
     certificate_url: https://mt.tahdah.me/profile/index/95316
     date: 2011-10-01
     summary: Professional certification to lead hillwalking groups.
+
+software:
+  - name: radiatR
+    url: https://github.com/JohnKirwan/radiatR
+    summary: R package and Shiny app for circular-arena tracking data; imports from 20+ tracking tools, circular statistics and figures
+  - name: luxR
+    url: https://github.com/JohnKirwan/luxR
+    summary: R package and Shiny app for modelling underwater light environments, photoreceptor excitation and visual contrast
 
 bio: |-
   Computational biologist and data scientist with a track record of applying machine
@@ -302,21 +354,21 @@ bio: |-
 
   My background combines rigorous quantitative training (Bayesian modelling, deep learning,
   MLOps) with hands-on experience across the full data pipeline — from experimental design
-  through to deployment and reproducible reporting. I have worked at the interface of Biotech
-  and AI in an industry research setting, contributing to work that reached commercial spinout
-  stage and to a NeurIPS 2025 publication on uncertainty quantification in deep regression.
+  through to reproducible reporting. I have worked at the interface of Biotech
+  and AI in an industry research setting, contributing to a drug-discovery venture that spun
+  out as Uncharted Chem and to a NeurIPS 2025 publication on uncertainty quantification in deep regression.
 
 resume_pdf:
   output: static/uploads/resume.pdf
   skill_group_names:
     - Technical Skills
   include_awards: true
+  max_highlights: 6
   page_one:
     key_highlights:
-      - Computational biologist with nearly four years at the AI-biotech interface in industry research
-      - Experience spanning structure prediction, binding-affinity modelling, metagenomics, and uncertainty quantification
-      - Hands-on ML engineering with PyTorch, Docker, AWS, Azure DevOps, and GPU workflows
-      - Research background grounded in Bayesian modelling, quantitative biology, and reproducible analysis
+      - "Drug-discovery ML: structure prediction, docking and binding-affinity modelling in industry R&D"
+      - "Bayesian multilevel modelling (R, Stan) underpinning peer-reviewed work in quantitative biology"
+      - "Open-source R packages with browser-based Shiny apps: radiatR and luxR"
     featured_skill_names:
       - Python
       - R
@@ -329,9 +381,39 @@ resume_pdf:
       - Metagenomics
       - Docker
     featured_experience_positions:
+      - Freelance Bioinformatics Scientist
       - Bioinformatics Scientist
       - Postdoctoral Researcher
     featured_education_degrees:
       - PhD
-      - MSc
-      - BSc (Hons)
+      - MSc by Research
+  variants:
+    data-science:
+      output: static/uploads/John_Kirwan_CV_Data_Science.pdf
+      headline: Data Scientist · Statistical Modelling · Machine Learning · Life Sciences
+      role: Data Scientist
+      summary: >-
+        Data scientist with a PhD and a background in computational biology, combining
+        rigorous statistical modelling — Bayesian inference, experimental design and
+        uncertainty quantification — with practical machine learning in Python and R.
+        Nearly four years in industry R&D building data pipelines, training and validating
+        deep-learning models, and translating results for experimental scientists, including
+        a contribution to a NeurIPS 2025 paper on uncertainty quantification.
+      page_one:
+        key_highlights:
+          - "Uncertainty-aware modelling: Bayesian multilevel models (R, Stan) and deep-learning uncertainty quantification"
+          - "Experimental design and power analysis, from behavioural experiments to preclinical studies"
+          - "Data products: open-source R packages with interactive Shiny apps (radiatR, luxR)"
+        featured_skill_names:
+          - Python
+          - R
+          - pandas
+          - scikit-learn
+          - PyTorch
+          - Stan
+          - Statistical Modelling
+          - Bayesian Statistics
+          - Experimental Design
+          - Data Visualisation
+          - Machine Learning
+          - Docker
