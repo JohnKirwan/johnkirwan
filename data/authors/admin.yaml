@@ -82,29 +82,29 @@ interests:
 
 education:
   - degree: PhD
-    area: Sensory Biology
+    area: Biology (Vision Science)
     institution: Lund University
     location: Sweden
     date_start: 2013-05-01
-    date_end: 2018-05-07
+    date_end: 2018-06-07
     summary: "Thesis: 'Spatial Vision in Diverse Invertebrates'."
     button:
       text: Read Thesis Introduction
       url: https://lucris.lub.lu.se/ws/portalfiles/portal/43103387/John_Kirwan_WEBB.PDF
-  - degree: MSc
-    area: Molecular Evolution
+  - degree: MSc by Research
+    area: Biology (Molecular Evolution)
     institution: University College Dublin
     location: Ireland
-    date_start: 2008-12-09
-    date_end: 2010-06-01
+    date_start: 2008-09-06
+    date_end: 2010-09-23
     summary: "Thesis: 'The Molecular Evolution of Hearing in Mammals'"
   - degree: BSc (Hons)
     area: Zoology
     institution: University College Dublin
     location: Ireland
     date_start: 2004-09-12
-    date_end: 2008-05-31
-    summary: "First Class Honours (GPA: 4.02/4.2)"
+    date_end: 2008-06-13
+    summary: "First Class Honours; UCD Zoology Medal (2008)"
 
 experience:
   - position: Freelance Bioinformatics Scientist
@@ -354,7 +354,7 @@ bio: |-
 
   My background combines rigorous quantitative training (Bayesian modelling, deep learning,
   MLOps) with hands-on experience across the full data pipeline — from experimental design
-  through to deployment and reproducible reporting. I have worked at the interface of Biotech
+  through to reproducible reporting. I have worked at the interface of Biotech
   and AI in an industry research setting, contributing to a drug-discovery venture that spun
   out as Uncharted Chem and to a NeurIPS 2025 publication on uncertainty quantification in deep regression.
 
@@ -386,7 +386,7 @@ resume_pdf:
       - Postdoctoral Researcher
     featured_education_degrees:
       - PhD
-      - MSc
+      - MSc by Research
   variants:
     data-science:
       output: static/uploads/John_Kirwan_CV_Data_Science.pdf
