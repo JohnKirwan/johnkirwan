@@ -10,10 +10,8 @@ authors:
 - Simos Gerasimou
 hugoblox:
   ids:
-    doi: ""
+    doi: 10.52202/085713-1692
 links:
-- type: paper
-  url: https://doi.org/10.52202/085713-1692
 - type: pdf
   url: https://www.proceedings.com/content/085/085713-1692open.pdf
 - type: slides
