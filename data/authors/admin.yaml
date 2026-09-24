@@ -107,6 +107,12 @@ education:
     summary: "First Class Honours (GPA: 4.02/4.2)"
 
 experience:
+  - position: Freelance Bioinformatics Scientist
+    company_name: Self-employed
+    location: Spain
+    date_start: 2026-07-01
+    date_end: ""
+    summary: ""
   - position: Bioinformatics Scientist
     company_name: Arquimea Research Centre
     company_url: https://www.arquimea.com/research-development-innovation/research-center/
@@ -119,10 +125,10 @@ experience:
       computational tools and the biology.
 
       - Contributing author on a NeurIPS 2025 paper on uncertainty quantification for deep regression: ran the empirical validation and fine-tuned/retrained models in PyTorch
-      - Built a modular synthetic-data-generation pipeline orchestrating GNINA, DiffDock and AlphaFold 2, including dataset sourcing and inter-tool format conversion
-      - Predicted protein structures and binding affinities for protein complexes, including metal-ion and ATP cofactors, using Boltz, AlphaFold, Foldseek and BioEMU
-      - Developed the binding-affinity objective for Uncharted, an internal venture building a multi-objective small-molecule optimisation engine
-      - Analysed metagenomic data, prototyped a novel operon-design approach, and ran statistical power analyses for preclinical study design
+      - Built a modular synthetic-data-generation pipeline (Python, Biopython) orchestrating GNINA, DiffDock and AlphaFold 2, including dataset sourcing and inter-tool format conversion
+      - Predicted structures and binding affinities for protein and protein–peptide complexes, including metal-ion and ATP cofactors, and designed de novo peptides, using Boltz, BoltzGen, AlphaFold, Foldseek and BioEMU
+      - Developed the binding-affinity objective for the multi-objective small-molecule optimisation engine of Uncharted, a venture that spun out as Uncharted Chem
+      - Applied AI tools and data analysis to cancer-research and gut-microbiota (metagenomic) programmes; prototyped a novel operon-design approach for extremophile bacteria and ran statistical power analyses for preclinical studies
       - Ran GPU workloads on an NVIDIA DGX cluster and AWS; Docker, Git and Azure DevOps within an Agile/Scrum team
   - position: Postdoctoral Researcher
     company_name: Stazione Zoologica Anton Dohrn
@@ -180,6 +186,10 @@ skills:
         description: ""
         percent: 75
         icon: code-bracket
+      - name: Biopython
+        description: ""
+        percent: 80
+        icon: code-bracket
       - name: Stan
         description: ""
         percent: 75
@@ -221,6 +231,14 @@ skills:
         percent: 75
         icon: chart-bar
       - name: Structural Bioinformatics
+        description: ""
+        percent: 75
+        icon: chart-bar
+      - name: Proteomics
+        description: ""
+        percent: 70
+        icon: chart-bar
+      - name: Uncertainty Quantification
         description: ""
         percent: 75
         icon: chart-bar
@@ -282,6 +300,9 @@ languages:
     percent: 50
 
 awards:
+  - title: Deep Learning with PyTorch
+    awarder: IBM
+    date: 2026-09-01
   - title: Pharmaceutical Bioinformatics & Applied Pharmaceutical Bioinformatics
     awarder: Uppsala University
     url: http://www.pharmbio.org
@@ -306,6 +327,10 @@ awards:
     certificate_url: https://coursera.org/share/d217c2ee9082940b903d22e46d3e8062
     date: 2023-03-10
     summary: Covers Git, GitHub, Linux, and Python, and the fundamentals of software engineering.
+  - title: Writing in the Sciences
+    awarder: Stanford University (online)
+    date: 2019-05-14
+    summary: Statement of Accomplishment with Distinction
   - title: Mountain Leader Award
     awarder: Mountain Leader Training Scotland
     url: https://www.mountain-training.org/qualifications/walking/mountain-leader
@@ -330,8 +355,8 @@ bio: |-
   My background combines rigorous quantitative training (Bayesian modelling, deep learning,
   MLOps) with hands-on experience across the full data pipeline — from experimental design
   through to deployment and reproducible reporting. I have worked at the interface of Biotech
-  and AI in an industry research setting, contributing to an internal venture building a
-  molecular optimisation engine and to a NeurIPS 2025 publication on uncertainty quantification in deep regression.
+  and AI in an industry research setting, contributing to a drug-discovery venture that spun
+  out as Uncharted Chem and to a NeurIPS 2025 publication on uncertainty quantification in deep regression.
 
 resume_pdf:
   output: static/uploads/resume.pdf
@@ -356,12 +381,12 @@ resume_pdf:
       - Metagenomics
       - Docker
     featured_experience_positions:
+      - Freelance Bioinformatics Scientist
       - Bioinformatics Scientist
       - Postdoctoral Researcher
     featured_education_degrees:
       - PhD
       - MSc
-      - BSc (Hons)
   variants:
     data-science:
       output: static/uploads/John_Kirwan_CV_Data_Science.pdf
