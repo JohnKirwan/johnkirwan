@@ -1,6 +1,6 @@
 ---
 title: "Uncertainty Quantification for Deep Regression using Contextualised Normalizing Flows"
-date: '2025-12-01'
+date: '2026-01-01'
 publication_types: ["paper-conference"]
 publication: "The Thirty-ninth Annual Conference on Neural Information Processing Systems"
 authors:
