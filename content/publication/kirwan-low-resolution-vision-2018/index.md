@@ -19,7 +19,7 @@ tags:
 - '"Velvet worm"'
 - '"Visually guided behaviour"'
 categories: []
-date: '2018-06-01'
+date: '2018-06-04'
 lastmod: 2020-11-16T22:30:45+01:00
 featured: false
 draft: false
