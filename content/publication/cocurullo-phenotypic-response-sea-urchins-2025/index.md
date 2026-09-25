@@ -15,7 +15,9 @@ authors:
 # A YAML list of notes for each author in the above `authors` list
 author_notes: []
 
-date: '2025-03-01'
+date: '2025-03-13'
+aliases:
+  - /publication/cocurullo-phenotypic-response-sea-urchins-2025/cocurullo-phenotypic-2025/
 
 # Date to publish webpage (NOT necessarily Bibtex publication's date).
 publishDate: '2025-05-08T12:40:19.928420Z'
