@@ -182,9 +182,9 @@ skills:
         description: ""
         percent: 85
         icon: code-bracket
-      - name: scikit-learn
+      - name: Git
         description: ""
-        percent: 75
+        percent: 80
         icon: code-bracket
       - name: PyTorch
         description: ""
@@ -371,7 +371,7 @@ resume_pdf:
           - Python
           - R
           - pandas
-          - scikit-learn
+          - Git
           - PyTorch
           - Stan
           - Statistical Modelling
