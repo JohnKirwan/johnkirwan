@@ -1,6 +1,8 @@
 ---
 title: "Uncertainty Quantification for Deep Regression using Contextualised Normalizing Flows"
 date: '2026-01-01'
+aliases:
+  - /publication/sosa-uncertainty-quantification-2025/
 publication_types: ["paper-conference"]
 publication: "The Thirty-ninth Annual Conference on Neural Information Processing Systems"
 authors:
