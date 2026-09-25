@@ -30,6 +30,8 @@ tags:
 - '"Selection"'
 categories: []
 date: '2012-05-01'
+aliases:
+  - /publication/davies-parallel-signatures-sequence-2011/
 lastmod: 2020-11-16T22:30:44+01:00
 featured: false
 draft: false
