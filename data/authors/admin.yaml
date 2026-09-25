@@ -167,7 +167,7 @@ experience:
       - Designed novel experimental protocols for quantifying animal visual performance
 
 skills:
-  - name: Technical Skills
+  - name: Programming & Tools
     include_in_pdf: true
     items:
       - name: Python
@@ -186,30 +186,17 @@ skills:
         description: ""
         percent: 75
         icon: code-bracket
-      - name: Biopython
-        description: ""
-        percent: 80
-        icon: code-bracket
-      - name: Stan
-        description: ""
-        percent: 75
-        icon: code-bracket
       - name: PyTorch
         description: ""
         percent: 75
         icon: code-bracket
-      - name: TensorFlow
+      - name: Docker
         description: ""
-        percent: 65
+        percent: 70
         icon: code-bracket
-      - name: Machine Learning
-        description: ""
-        percent: 85
-        icon: chart-bar
-      - name: Deep Learning
-        description: ""
-        percent: 80
-        icon: chart-bar
+  - name: Statistics & Modelling
+    include_in_pdf: true
+    items:
       - name: Statistical Modelling
         description: ""
         percent: 85
@@ -218,11 +205,30 @@ skills:
         description: ""
         percent: 80
         icon: chart-bar
+      - name: Stan
+        description: ""
+        percent: 75
+        icon: code-bracket
       - name: Experimental Design
         description: ""
         percent: 80
         icon: chart-bar
+      - name: Uncertainty Quantification
+        description: ""
+        percent: 75
+        icon: chart-bar
       - name: Data Visualisation
+        description: ""
+        percent: 80
+        icon: chart-bar
+  - name: Machine Learning & Bioinformatics
+    include_in_pdf: true
+    items:
+      - name: Machine Learning
+        description: ""
+        percent: 85
+        icon: chart-bar
+      - name: Deep Learning
         description: ""
         percent: 80
         icon: chart-bar
@@ -238,55 +244,10 @@ skills:
         description: ""
         percent: 70
         icon: chart-bar
-      - name: Uncertainty Quantification
-        description: ""
-        percent: 75
-        icon: chart-bar
       - name: Metagenomics
         description: ""
         percent: 70
         icon: chart-bar
-      - name: Docker
-        description: ""
-        percent: 70
-        icon: code-bracket
-      - name: Git
-        description: ""
-        percent: 80
-        icon: code-bracket
-      - name: Azure DevOps
-        description: ""
-        percent: 70
-        icon: code-bracket
-      - name: AWS
-        description: ""
-        percent: 55
-        icon: code-bracket
-      - name: Valohai
-        description: ""
-        percent: 70
-        icon: code-bracket
-      - name: Matlab
-        description: ""
-        percent: 60
-        icon: code-bracket
-  - name: Hobbies
-    include_in_pdf: false
-    color: "#eeac02"
-    color_border: "#f0bf23"
-    items:
-      - name: Hiking
-        description: ""
-        percent: 60
-        icon: person-simple-walk
-      - name: Reading
-        description: ""
-        percent: 100
-        icon: cat
-      - name: Photography
-        description: ""
-        percent: 80
-        icon: camera
 
 languages:
   - name: English
@@ -361,7 +322,9 @@ bio: |-
 resume_pdf:
   output: static/uploads/resume.pdf
   skill_group_names:
-    - Technical Skills
+    - Programming & Tools
+    - Statistics & Modelling
+    - Machine Learning & Bioinformatics
   include_awards: true
   max_highlights: 6
   page_one:
