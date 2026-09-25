@@ -1,6 +1,6 @@
 ---
 title: "Dancing in the dark: The annelid Platynereis dumerilii is re-envisioned for its climactic final night"
-date: '2025-12-16'
+date: '2026-02-01'
 authors:
 - John D. Kirwan
 - Emelie A. Brodrick
