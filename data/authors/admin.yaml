@@ -270,8 +270,7 @@ awards:
     date: 2020-05-31
     summary: Pass with Distinction
   - title: Customising your models with TensorFlow 2
-    awarder: Coursera / Imperial College London
-    icon: brands/coursera
+    awarder: Imperial College London (via Coursera)
     url: https://www.coursera.org/learn/customising-models-tensorflow2
     certificate_url: https://www.coursera.org/account/accomplishments/verify/Y334QC7PYYL6
     date: 2025-08-14
@@ -282,8 +281,8 @@ awards:
     certificate_url: https://learn.valohai.academy/certificate/NCXTeIcmIw
     date: 2025-08-12
   - title: Applied Software Engineering Fundamentals Specialization
-    awarder: Coursera / IBM
-    icon: brands/coursera
+    awarder: IBM
+    icon: brands/ibm
     url: https://www.coursera.org/specializations/software-engineering-fundamentals
     certificate_url: https://coursera.org/share/d217c2ee9082940b903d22e46d3e8062
     date: 2023-03-10
