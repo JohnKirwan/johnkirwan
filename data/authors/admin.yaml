@@ -263,6 +263,8 @@ languages:
 awards:
   - title: Deep Learning with PyTorch
     awarder: IBM
+    icon: brands/ibm
+    certificate_url: https://www.credly.com/earner/earned/badge/ee27b14c-b83c-4ed1-b9d6-4748fed6c51b
     date: 2026-09-01
   - title: Pharmaceutical Bioinformatics & Applied Pharmaceutical Bioinformatics
     awarder: Uppsala University
@@ -270,7 +272,7 @@ awards:
     date: 2020-05-31
     summary: Pass with Distinction
   - title: Customising your models with TensorFlow 2
-    awarder: Imperial College London (via Coursera)
+    awarder: Imperial College London
     url: https://www.coursera.org/learn/customising-models-tensorflow2
     certificate_url: https://www.coursera.org/account/accomplishments/verify/Y334QC7PYYL6
     date: 2025-08-14
