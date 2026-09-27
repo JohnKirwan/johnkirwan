@@ -107,7 +107,7 @@ education:
     summary: "First Class Honours; UCD Zoology Medal (2008)"
 
 experience:
-  - position: Freelance Bioinformatics Scientist
+  - position: Freelance Data Scientist
     company_name: Self-employed
     location: Spain
     date_start: 2026-07-01
@@ -346,7 +346,7 @@ resume_pdf:
       - Metagenomics
       - Docker
     featured_experience_positions:
-      - Freelance Bioinformatics Scientist
+      - Freelance Data Scientist
       - Bioinformatics Scientist
       - Postdoctoral Researcher
     featured_education_degrees:
