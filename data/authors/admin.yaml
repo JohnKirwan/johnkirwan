@@ -268,7 +268,7 @@ awards:
     date: 2026-09-01
   - title: Pharmaceutical Bioinformatics & Applied Pharmaceutical Bioinformatics
     awarder: Uppsala University
-    url: http://www.pharmbio.org
+    url: https://pharmb.io/education/
     date: 2020-05-31
     summary: Pass with Distinction
   - title: Customising your models with TensorFlow 2
