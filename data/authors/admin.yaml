@@ -84,7 +84,7 @@ education:
   - degree: PhD
     area: Biology (Vision Science)
     institution: Lund University
-    location: Sweden
+    location: Lund, Sweden
     date_start: 2013-05-01
     date_end: 2018-06-07
     summary: "Thesis: 'Spatial Vision in Diverse Invertebrates'."
@@ -94,14 +94,14 @@ education:
   - degree: MSc by Research
     area: Biology (Molecular Evolution)
     institution: University College Dublin
-    location: Ireland
+    location: Dublin, Ireland
     date_start: 2008-09-06
     date_end: 2010-09-23
     summary: "Thesis: 'The Molecular Evolution of Hearing in Mammals'"
   - degree: BSc (Hons)
     area: Zoology
     institution: University College Dublin
-    location: Ireland
+    location: Dublin, Ireland
     date_start: 2004-09-12
     date_end: 2008-06-13
     summary: "First Class Honours; UCD Zoology Medal (2008)"
@@ -109,7 +109,7 @@ education:
 experience:
   - position: Freelance Data Scientist
     company_name: Self-employed
-    location: Spain
+    location: La Laguna, Spain
     date_start: 2026-07-01
     date_end: ""
     summary: ""
