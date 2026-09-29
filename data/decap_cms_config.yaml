@@ -130,23 +130,6 @@ collections:
               - {label: Date, name: date, widget: string, required: false}
               - {label: Summary, name: summary, widget: markdown, required: false}
           - {label: Bio, name: bio, widget: markdown, required: false}
-          - label: Resume PDF
-            name: resume_pdf
-            widget: object
-            required: false
-            fields:
-              - {label: Output, name: output, widget: string, required: false}
-              - {label: Include Awards, name: include_awards, widget: boolean, required: false, default: true}
-              - {label: Skill Group Names, name: skill_group_names, widget: list, required: false}
-              - label: Page One
-                name: page_one
-                widget: object
-                required: false
-                fields:
-                  - {label: Key Highlights, name: key_highlights, widget: list, required: false}
-                  - {label: Featured Skill Names, name: featured_skill_names, widget: list, required: false}
-                  - {label: Featured Experience Positions, name: featured_experience_positions, widget: list, required: false}
-                  - {label: Featured Education Degrees, name: featured_education_degrees, widget: list, required: false}
       - name: teaching
         label: Teaching
         file: content/teaching/_index.md
