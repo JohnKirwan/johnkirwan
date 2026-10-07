@@ -24,3 +24,7 @@ main:
     identifier: G3rTV2to
     url: /#papers
     weight: 40
+  - name: Contact
+    identifier: Ct4Rm9Qx
+    url: contact/
+    weight: 50
