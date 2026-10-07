@@ -14,7 +14,7 @@ main:
     weight: 20
   - name: CV
     identifier: ktytrxFc
-    url: /uploads/resume.pdf
+    url: /uploads/CV_John_Kirwan.pdf
     weight: 30
   - name: Software
     identifier: Sw7Kq2Lm
