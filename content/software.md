@@ -36,6 +36,7 @@ sections:
         circular-statistics summaries and figures.
 
         [📖 Documentation](https://johnkirwan.github.io/radiatR) ·
+        [📦 CRAN](https://CRAN.R-project.org/package=radiatR) ·
         [💻 Source on GitHub](https://github.com/JohnKirwan/radiatR) ·
         [🚀 Open the app in a new tab](https://johnkirwan.github.io/radiatR/app/) ·
         [☁️ Hosted on Posit Connect Cloud](https://019f950c-e3cd-3ba0-a8cb-2a8a76a14dd5.share.connect.posit.cloud/)
