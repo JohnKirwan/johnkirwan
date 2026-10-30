@@ -122,7 +122,7 @@ experience:
       generative molecular design, and applied machine learning — the link between the
       computational tools and the biology.
 
-      - Contributing author on a NeurIPS 2025 paper on uncertainty quantification for deep regression: ran the empirical validation and fine-tuned/retrained models in PyTorch
+      - Contributing author on a NeurIPS 2025 paper on uncertainty quantification for deep regression: helped develop the method in PyTorch and ran the empirical validation
       - Built a modular synthetic-data-generation pipeline (Python, Biopython) orchestrating GNINA, DiffDock and AlphaFold 2, including dataset sourcing and inter-tool format conversion
       - Predicted structures and binding affinities for protein and protein–peptide complexes, including metal-ion and ATP cofactors, and designed de novo peptides, using Boltz, BoltzGen, AlphaFold, Foldseek and BioEMU
       - Developed the binding-affinity objective for the multi-objective small-molecule optimisation engine of Uncharted, a venture that spun out as Uncharted Chem
