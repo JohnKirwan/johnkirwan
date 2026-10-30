@@ -302,7 +302,7 @@ awards:
 software:
   - name: radiatR
     url: https://github.com/JohnKirwan/radiatR
-    summary: CRAN R package and Shiny app for circular-arena tracking data; imports from 20+ tracking tools, circular statistics and figures
+    summary: CRAN R package and Shiny app for circular-arena tracking data; imports from DeepLabCut, SLEAP, EthoVision and other trackers, circular statistics and figures
   - name: luxR
     url: https://github.com/JohnKirwan/luxR
     summary: R package and Shiny app for modelling underwater light environments, photoreceptor excitation and visual contrast
