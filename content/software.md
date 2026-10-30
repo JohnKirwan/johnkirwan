@@ -30,10 +30,11 @@ sections:
       text: |-
         **Analysis and visualisation of circular-arena tracking data.** An R
         package providing a complete pipeline for analysing animal orientation
-        and movement in circular arenas — reading data from 20+ tracking tools
-        (EthoVision, DeepLabCut, SLEAP, TRex, ANY-maze, TrackMate, idtracker.ai,
-        and others), deriving per-trial heading directions, and producing
-        circular-statistics summaries and figures.
+        and movement in circular arenas — reading data from tracking tools
+        (EthoVision, DeepLabCut, SLEAP, TRex, ANY-maze, TrackMate, idtracker.ai
+        and ToxTrac, or any other format via a custom loader), deriving
+        per-trial heading directions, and producing circular-statistics
+        summaries and figures.
 
         [📖 Documentation](https://johnkirwan.github.io/radiatR) ·
         [📦 CRAN](https://CRAN.R-project.org/package=radiatR) ·
